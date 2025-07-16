@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Provider Dashboard - Home Services</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container d-flex min-vh-100">
+      <!-- Sidebar -->
+      <aside class="sidebar text-white overflow-y-auto position-fixed vh-100">
+        <div class="sidebar-header">
+          <a
+            class="logo text-decoration-none text-white d-flex align-items-center gap- fw-bold fs-5"
+            href="/provider-dashboard.html"
+          >
+            <i class="fas fa-home"></i>
+            <span>Home Services</span>
+          </a>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul
+            class="list-unstyled nav flex-column"
+            id="v-pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link text-decoration-none d-flex align-items-center active"
+                id="tab-dashboard"
+                data-bs-toggle="pill"
+                href="#dashboard"
+                role="tab"
+              >
+                <i class="fas fa-tachometer-alt text-cente"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#services"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                id="tab-services"
+                data-bs-toggle="pill"
+                role="tab"
+              >
+                <i class="fas fa-search text-center"></i>
+                <span>Browse Services</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#bookings"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                id="tab-bookings"
+                data-bs-toggle="pill"
+                role="tab"
+              >
+                <i class="fas fa-calendar-check text-center"></i>
+                <span>My Bookings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#favorites"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                id="tab-favorites"
+                data-bs-toggle="pill"
+                role="tab"
+              >
+                <i class="fas fa-heart text-center"></i>
+                <span>Favorites</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#profile"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                id="tab-profile"
+                data-bs-toggle="pill"
+                role="tab"
+              >
+                <i class="fas fa-user text-center"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#earnings"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                id="tab-earnings"
+                data-bs-toggle="pill"
+                role="tab"
+              >
+                <i class="fas fa-dollar-sign text-center"></i>
+                <span>Earnings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#reviews"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                id="tab-reviews"
+                data-bs-toggle="pill"
+                role="tab"
+              >
+                <i class="fas fa-star text-center"></i>
+                <span>Reviews</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#settings"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                id="tab-settings"
+                data-bs-toggle="pill"
+                role="tab"
+              >
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <button class="btn w-100 d-flex align-items-center nav-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content flex-grow-1" id="mainContent">
+        <!-- Top Header -->
+        <header
+          class="top-header bg-white d-flex align-items-center justify-content-between position-sticky top-0"
+        >
+          <div class="header-left d-flex align-items-center gap-3">
+            <button class="menu-toggle" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="page-title fw-semibold">Dashboard</h1>
+          </div>
+          <div class="header-right d-flex align-items-center">
+            <div class="notifications">
+              <button
+                id="notificationBell"
+                class="notification-btn position-relative p-2 rounded-circle border-0"
+              >
+                <i class="fas fa-bell"></i>
+                <span
+                  class="notification-badge position-absolute top-0 text-white rounded-circle d-flex align-items-center justify-content-center"
+                  >5</span
+                >
+              </button>
+            </div>
+            <div class="user-profile d-flex align-items-center">
+              <img
+                src="public/assest/default-avatar.jpg"
+                alt="User Avatar"
+                class="user-avatar rounded-circle object-fit-cover"
+              />
+              <span class="user-name fw-medium">Bilal Name</span>
+            </div>
+          </div>
+        </header>
+        <!-- Page Content -->
+        <div class="tab-content page-content provider" id="pills-tabContent">
+          <!-- Main Dashboard Content -->
+          <div
+            class="tab-pane fade show active dashboard-overview"
+            id="dashboard"
+            role="tabpanel"
+          >
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>Today's Bookings</h3>
+                  <p class="stat-number">12</p>
+                  <span class="stat-change positive">+15%</span>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>Monthly Earnings</h3>
+                  <p class="stat-number">2,450 $</p>
+                  <span class="stat-change positive">+8%</span>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>Overall Rating</h3>
+                  <p class="stat-number">4.8</p>
+                  <span class="stat-change positive">+0.2</span>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>New Customers</h3>
+                  <p class="stat-number">28</p>
+                  <span class="stat-change positive">+12%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upcoming Bookings -->
+            <div class="upcoming-bookings bg-white">
+              <h2 class="fs-3 fw-semibold">Upcoming Bookings</h2>
+              <div class="bookings-list d-flex flex-column gap-3">
+                <div
+                  class="booking-item d-flex justify-content-between align-items-center"
+                >
+                  <div class="booking-info">
+                    <h4 class="fs-6 fw-semibold mb-1">AC Maintenance</h4>
+                    <p>Client: Sara Ahmed</p>
+                    <p>Time: Today 2:00 PM</p>
+                  </div>
+                  <div class="booking-actions">
+                    <button class="btn btn-primary">Accept</button>
+                    <button class="btn btn-secondary">Reject</button>
+                  </div>
+                </div>
+
+                <div
+                  class="booking-item d-flex justify-content-between align-items-center"
+                >
+                  <div class="booking-info">
+                    <h4 class="fs-6 fw-semibold mb-1">Home Cleaning</h4>
+                    <p>Client: Mohamed Ali</p>
+                    <p>Time: Tomorrow 10:00 AM</p>
+                  </div>
+                  <div class="booking-actions d-flex">
+                    <button class="btn btn-primary">Accept</button>
+                    <button class="btn btn-secondary">Reject</button>
+                  </div>
+                </div>
+
+                <div
+                  class="booking-item d-flex justify-content-between align-items-center"
+                >
+                  <div class="booking-info">
+                    <h4 class="fs-6 fw-semibold mb-1">Plumbing Repair</h4>
+                    <p>Client: Fatima Khalid</p>
+                    <p>Time: Day after tomorrow 4:00 PM</p>
+                  </div>
+                  <div class="booking-actions">
+                    <button class="btn btn-primary">Accept</button>
+                    <button class="btn btn-secondary">Reject</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Reviews -->
+            <div class="recent-reviews bg-white">
+              <h2 class="fs-3 fw-semibold">Recent Reviews</h2>
+              <div class="reviews-list d-flex flex-column gap-3">
+                <div class="review-item">
+                  <div
+                    class="review-header d-flex justify-content-between align-items-center"
+                  >
+                    <span class="customer-name fw-semibold">Ahmed Mahmoud</span>
+                    <div class="rating d-flex gap-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <p class="review-text fw-light">
+                    Excellent and fast service, highly recommended!
+                  </p>
+                </div>
+
+                <div class="review-item">
+                  <div
+                    class="review-header d-flex justify-content-between align-items-center"
+                  >
+                    <span class="customer-name fw-semibold">Noura Salem</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+                  <p class="review-text fw-light">
+                    Good work but arrived a bit late.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Services Content -->
+          <div
+            class="tab-pane fade services-page"
+            id="services"
+            role="tabpanel"
+          >
+            <div
+              class="d-flex justify-content-between align-items-center page-header"
+            >
+              <h2 class="fw-semibold">My Available Services</h2>
+              <button
+                class="btn btn-primary add-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#addServiceModal"
+              >
+                Add New Service
+              </button>
+            </div>
+            <div class="services-grid">
+              <div
+                class="service-card d-flex flex-column justify-content-center align-items-center"
+              >
+                <div
+                  class="service-icon text-white d-flex justify-content-center align-items-center rounded-circle mb-3"
+                >
+                  <i class="fas fa-broom"></i>
+                </div>
+                <h3 class="fw-bold fs-4">Pest Control</h3>
+                <p>
+                  Effective pest control services using safe and approved
+                  chemicals.
+                </p>
+                <div class="service-price fw-medium text-success mb-2">
+                  Base Price: $120
+                </div>
+                <div class="service-actions">
+                  <button
+                    class="btn btn-primary edit-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editServiceModal"
+                  >
+                    Edit
+                  </button>
+                  <button class="btn btn-secondary delete-btn">Delete</button>
+                </div>
+              </div>
+              <div
+                class="service-card d-flex flex-column justify-content-center align-items-center"
+              >
+                <div
+                  class="service-icon text-white d-flex justify-content-center align-items-center rounded-circle mb-3"
+                >
+                  <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="fw-bold fs-4">Furniture Assembly</h3>
+                <p>
+                  Assembly services for all types of home and office furniture.
+                </p>
+                <div class="service-price fw-medium text-success mb-2">
+                  Base Price: $120
+                </div>
+
+                <div class="service-actions">
+                  <button
+                    class="btn btn-primary edit-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editServiceModal"
+                  >
+                    Edit
+                  </button>
+                  <button class="btn btn-secondary delete-btn">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Booking Content -->
+          <div
+            class="tab-pane fade bookings-page"
+            id="bookings"
+            role="tabpanel"
+          >
+            <div
+              class="d-flex justify-content-between align-items-center page-header"
+            >
+              <h2>All Bookings</h2>
+              <ul
+                class="nav nav-pills gap-2 flex-wrap d-flex gap-10 filter-tabs"
+                id="bookingFilters"
+                role="tablist"
+              >
+                <li class="nav-item active" role="presentation">
+                  <button
+                    type="button"
+                    class="nav-link text-black bg-white tab-btn active"
+                    data-filter="all"
+                  >
+                    All
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    type="button"
+                    class="nav-link text-black bg-white tab-btn"
+                    data-filter="pending"
+                  >
+                    Pending
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    type="button"
+                    class="nav-link text-black bg-white tab-btn"
+                    data-filter="confirmed"
+                  >
+                    Confirmed
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    type="button"
+                    class="nav-link text-black bg-white tab-btn"
+                    data-filter="completed"
+                  >
+                    Completed
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    type="button"
+                    class="nav-link text-black bg-white tab-btn"
+                    data-filter="cancelled"
+                  >
+                    Cancelled
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bookings-table bg-white overflow-hidden">
+              <div class="booking-row d-grid align-items-center header">
+                <div>Service</div>
+                <div>Client</div>
+                <div>Date</div>
+                <div>Time</div>
+                <div>Status</div>
+                <div>Actions</div>
+              </div>
+
+              <div
+                class="booking-row d-grid align-items-center grid tx-dark"
+                data-status="pending"
+              >
+                <div>AC Maintenance</div>
+                <div>Sara Ahmed</div>
+                <div>2024-01-15</div>
+                <div>2:00 PM</div>
+                <div><span class="status pending">Pending</span></div>
+                <div>
+                  <button class="btn btn-primary btn-sm">Accept</button>
+                  <button class="btn btn-secondary btn-sm">Reject</button>
+                </div>
+              </div>
+
+              <div
+                class="booking-row d-grid align-items-center grid tx-dark"
+                data-status="confirmed"
+              >
+                <div>Home Cleaning</div>
+                <div>Mohamed Ali</div>
+                <div>2024-01-16</div>
+                <div>10:00 AM</div>
+                <div><span class="status confirmed">Confirmed</span></div>
+                <div>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#confirmedBookingDetailsModal"
+                  >
+                    Details
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="booking-row d-grid align-items-center grid tx-dark"
+                data-status="completed"
+              >
+                <div>Plumbing Repair</div>
+                <div>Fatima Khalid</div>
+                <div>2024-01-17</div>
+                <div>4:00 PM</div>
+                <div><span class="status completed">Completed</span></div>
+                <div>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#ratedBookingDetailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+
+              <!-- No results message, display when No bookings in the any status  -->
+              <div
+                class="no-results-message d-none text-center text-muted py-4"
+              >
+                <i class="bi bi-search"></i> No bookings found with this status.
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Add Service Modal -->
+      <div
+        class="modal fade"
+        id="addServiceModal"
+        tabindex="-1"
+        aria-labelledby="addServiceModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content p-2">
+            <div class="modal-header">
+              <h2 class="fw-semibold fs-5">Add New Service</h2>
+              <button
+                type="button"
+                class="btn-close position-absolute end-0 m-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="serviceName" class="form-label"
+                    >Service Name</label
+                  >
+                  <input type="text" class="form-control" id="serviceName" />
+                </div>
+
+                <!-- Service Icon -->
+                <select id="serviceIcon" class="form-select" hidden>
+                  <option value="cleaning">
+                    <i class="fas fa-broom"></i>
+                  </option>
+                  <option value="repairing">
+                    <i class="fas fa-wrench"></i>
+                  </option>
+                  <option value="washing"></option>
+                  <option value="electrical">
+                    <i class="fas fa-bolt"></i>
+                  </option>
+                  <option value="maintenance">
+                    <i class="fas fa-tools"></i>
+                  </option>
+                </select>
+
+                <div class="mb-3">
+                  <label for="serviceType" class="form-label"
+                    >Service Type</label
+                  >
+                  <select id="serviceType" class="form-select">
+                    <option value="electrical">Electrical</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="repairing">Repairing</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="washing">Washing</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input type="number" class="form-control" id="price" />
+                </div>
+
+                <div class="mb-3">
+                  <label for="description" class="form-label"
+                    >Description</label
+                  >
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="description"
+                  ></textarea>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                    checked="true"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Check out, If you need service active for now</label
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Add Service
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edit Service Modal -->
+      <div
+        class="modal fade"
+        id="editServiceModal"
+        tabindex="-1"
+        aria-labelledby="editServiceModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content p-2">
+            <div class="modal-header">
+              <h2 class="fw-semibold fs-5">Edit Service Name</h2>
+              <button
+                type="button"
+                class="btn-close position-absolute end-0 m-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="serviceName" class="form-label"
+                    >Service Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="serviceName"
+                    value="Pest Control"
+                  />
+                </div>
+
+                <!-- Service Icon -->
+                <select id="serviceIcon" class="form-select" hidden>
+                  <option value="cleaning">
+                    <i class="fas fa-broom"></i>
+                  </option>
+                  <option value="repairing">
+                    <i class="fas fa-wrench"></i>
+                  </option>
+                  <option value="washing"></option>
+                  <option value="electrical">
+                    <i class="fas fa-bolt"></i>
+                  </option>
+                  <option value="maintenance">
+                    <i class="fas fa-tools"></i>
+                  </option>
+                </select>
+
+                <div class="mb-3">
+                  <label for="serviceType" class="form-label"
+                    >Service Type</label
+                  >
+                  <select id="serviceType" class="form-select">
+                    <option value="electrical">Electrical</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="repairing">Repairing</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="washing">Washing</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="price"
+                    value="120"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="description" class="form-label"
+                    >Description</label
+                  >
+                  <textarea type="text" class="form-control" id="description">
+Effective pest control services using safe and approved chemicals.
+                  </textarea>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="status"
+                    checked="true"
+                  />
+                  <label class="form-check-label" for="status"
+                    >Check out, If you need service active for now</label
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Edit Service
+                </button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirmed Booking Details Modal -->
+      <div
+        class="modal fade"
+        id="confirmedBookingDetailsModal"
+        tabindex="-1"
+        aria-labelledby="confirmedBookingDetailsModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content mx-auto p-4 rounded-4 shadow-sm border-0">
+            <!-- Header -->
+            <div class="modal-header border-0">
+              <h2 class="fs-4 fw-semibold mb-0">Booking Details</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <!-- Booking Info -->
+              <div class="mb-4">
+                <p class="mb-3"><strong>Service:</strong> Home Cleaning</p>
+                <p class="mb-3"><strong>Client:</strong> Mohamed Ali</p>
+                <p class="mb-3"><strong>Date:</strong> 2024-01-16</p>
+                <p class="mb-3"><strong>Time:</strong> 10:00 AM</p>
+                <p>
+                  <strong>Status:</strong>
+                  <span class="badge status confirmed">Confirmed</span>
+                </p>
+              </div>
+
+              <hr class="my-3" />
+
+              <!-- Waiting Notice -->
+              <div
+                class="d-flex align-items-center gap-3 p-3 bg-light rounded-3"
+              >
+                <!-- Icon -->
+                <div class="text-primary fs-3">
+                  <i class="fas fa-clock"></i>
+                </div>
+
+                <!-- Message -->
+                <div>
+                  <h6 class="fw-bold mb-1">Awaiting Completion</h6>
+                  <p class="mb-0 text-muted small">
+                    This booking has been confirmed. Once completed, you will
+                    receive a review from the customer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rated Booking Details Modal Completed Booking -->
+      <div
+        class="modal fade"
+        id="ratedBookingDetailsModal"
+        tabindex="-1"
+        aria-labelledby="ratedBookingDetailsModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content mx-auto p-4 rounded-4 shadow-sm border-0">
+            <!-- Header -->
+            <div class="modal-header border-0">
+              <h2 class="fs-4 fw-semibold mb-0">Booking Summary</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <!-- Booking Info -->
+              <div class="mb-4">
+                <p class="mb-3"><strong>Service:</strong> Plumbing Repair</p>
+                <p class="mb-3"><strong>Client:</strong> Fatima Khalid</p>
+                <p class="mb-3"><strong>Date:</strong> 2025-07-16</p>
+                <p class="mb-3">
+                  <strong>Time:</strong>
+                  <span class="start-time">4:00 PM</span> -
+                  <span class="end-time">6:00 PM</span>
+                </p>
+                <p>
+                  <strong>Status:</strong>
+                  <span class="status completed">Completed</span>
+                </p>
+              </div>
+
+              <hr class="my-3" />
+
+              <!-- Review Card -->
+              <div
+                class="d-flex align-items-start gap-3 bg-light rounded-3 p-3"
+              >
+                <!-- Avatar -->
+                <img
+                  src="https://via.placeholder.com/60x60?text=User"
+                  alt="Customer Avatar"
+                  class="rounded-circle"
+                  width="60"
+                  height="60"
+                  onerror="this.src='public/assest/default-customer-image.png';"
+                />
+
+                <!-- Review Content -->
+                <div class="flex-grow-1">
+                  <h6 class="fw-bold mb-1">Fatima Khalid</h6>
+
+                  <!-- Star Rating -->
+                  <div class="text-warning mb-2 fs-5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span class="ms-2 text-muted fs-6">(4.0)</span>
+                  </div>
+
+                  <!-- Feedback Text -->
+                  <p class="mb-0 fst-italic text-muted">
+                    “Very cooperative and polite. Service was great and on
+                    time.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script>
+      const notyf = new Notyf();
+    </script>
+    <script type="module" src="js/providerDashboard.js"></script>
+  </body>
+</html>

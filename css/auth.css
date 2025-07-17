@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
 
 body {
-  /* font-family: Arial, sans-serif; */
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: Arial, sans-serif;
 
   background: linear-gradient(to right, #667eea, #764ba2);
   display: flex;
@@ -14,23 +15,23 @@ body {
 }
 
 .auth-container {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
+  padding: 20px 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 100%;
   max-width: 400px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .auth-card h2 {
   margin-bottom: 30px;
-  color: #333;
   font-size: 2em;
 }
 
 .input-group {
-  position: relative;
   margin-bottom: 20px;
 }
 
@@ -47,30 +48,11 @@ body {
   z-index: 10;
 }
 
-.choices__inner {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-}
-.choices__item {
-  text-align: left;
-  padding-left: 30px;
-}
-.choices__list--dropdown {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px !important;
-  -webkit-border-radius: 8px !important;
-  -moz-border-radius: 8px !important;
-  -ms-border-radius: 8px !important;
-  -o-border-radius: 8px !important;
-}
-
 .input-group input {
-  width: calc(100% - 50px);
-  padding: 12px 20px 12px 45px;
+  padding: 10px 20px 10px 45px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 15px;
   transition: border-color 0.3s ease;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -85,18 +67,17 @@ body {
 
 .btn-primary {
   background: linear-gradient(to right, #667eea, #764ba2);
-  color: #fff;
   padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
   font-size: 1.1em;
-  cursor: pointer;
   transition: opacity 0.3s ease;
-  width: 100%;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+  opacity: 0.89;
 }
 
 p {
@@ -104,17 +85,102 @@ p {
   font-size: 0.9em;
 }
 
+p .forget-btn,
 p a {
   color: #667eea;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
+}
+
+p .forget-btn:hover,
+p a {
+  text-decoration: underline;
+  /* color: ; */
+}
+p a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 p a:hover {
   text-decoration: underline;
+  /* color: ; */
 }
 
-.input-error {
-  border: 2px solid #e74c3c;
-  background-color: #fceaea;
+/* Select Role Of User */
+.choices {
+  width: 100%;
+}
+.choices__inner {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.choices__item {
+  text-align: left;
+  padding-left: 30px;
+}
+.choices__list--dropdown {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+}
+
+#forgetPassModal .choices__item {
+  padding-left: 0;
+}
+#forgetPassModal .choices__list--dropdown .choices__item {
+  padding-left: 12px;
+}
+
+.verf-code-list {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.verf-code-item input {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: 1px solid #888;
+  text-align: center;
+
+  &:focus {
+    outline-color: #667eea;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: -5dvh;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  width: 400px;
+  color: antiquewhite;
+  font-size: 1.3rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.logo i,
+.logo span > span {
+  color: #ffd700;
+}
+.logo i {
+  margin-top: -4px;
+  font-size: 1rem;
 }

@@ -4,25 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Home Services</title>
-    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
     />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/auth.css" />
   </head>
   <body>
-    <div class="auth-container">
+    <div class="auth-container bg-white text-center w-100 position-relative">
+      <h1
+        class="logo d-flex align-items-center justify-content-center gap-3 fw-bold fs-5"
+      >
+        <i class="fas fa-home"></i>
+
+        <span>Home Booking <span>Services</span></span>
+      </h1>
       <div class="auth-card">
-        <h2>Login</h2>
+        <h2 class="text-dark fw-bold">Login</h2>
         <form>
           <div class="input-group">
             <i class="fas fa-user"></i>
             <input
               type="text"
               placeholder="Email or Phone Number"
-              required
               name="identifier"
+              class="w-100"
             />
           </div>
           <div class="input-group">
@@ -30,20 +42,142 @@
             <input
               type="password"
               placeholder="Password"
-              required
               name="password"
+              class="w-100"
             />
           </div>
-          <button type="submit" class="btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
         </form>
         <p>Don't have an account? <a href="register.html">Register here</a></p>
-        <p><a href="#">Forgot Password?</a></p>
+        <!-- <p><button class="btn btn-link text-decoration-none">Forgot Password?</button></p> -->
+        <p>
+          <button
+            class="btn btn-link forget-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#forgetPassModal"
+          >
+            Forgot Password?
+          </button>
+        </p>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+    <!-- forget Password Modal -->
+    <div
+      class="modal fade"
+      id="forgetPassModal"
+      tabindex="-1"
+      aria-labelledby="forgetPassModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content p-3">
+          <div class="modal-header">
+            <h2 class="fw-semibold fs-5">Reset Your Password</h2>
+            <button
+              type="button"
+              class="btn-close position-absolute end-0 m-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="resetBy">Reset Your Password By:</label>
+                <select id="resetBy" name="resetBy">
+                  <option value="" disabled>Signup As:</option>
+                  <option value="phoneNumber">Phone Number</option>
+                  <option value="email">Email</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  class="form-control"
+                  placeholder="+972 59 7746577"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="test@test.com"
+                />
+              </div>
+
+              <div class="mb-3 bg-light p-2 rounded-3">
+                <label for="verfiCode" class="form-label text-center"
+                  >We sent Verfication Code to Your email/phoneNumner, Check the
+                  code from it 🙂</label
+                >
+                <ul
+                  class="list-unstyled list-group list-group-horizontal justify-content-center align-items-center verf-code-list"
+                >
+                  <li class="list-group-item border-0 p-0 verf-code-item">
+                    <input type="text" minlength="1" maxlength="1" />
+                  </li>
+                  <li class="list-group-item border-0 p-0 verf-code-item">
+                    <input type="text" minlength="1" maxlength="1" />
+                  </li>
+                  <li class="list-group-item border-0 p-0 verf-code-item">
+                    <input type="text" minlength="1" maxlength="1" />
+                  </li>
+                  <li class="list-group-item border-0 p-0 verf-code-item">
+                    <input type="text" minlength="1" maxlength="1" />
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary py-2 px-5 w-100">
+                  Sent
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script>
+      const resetBySelect = document.getElementById("resetBy");
+      const choices = new Choices(resetBySelect, {
+        searchEnabled: false,
+        itemSelectText: "",
+      });
       const notyf = new Notyf();
+
+      const inputCodes = document.querySelectorAll(".verf-code-item input");
+
+      // For Verfication Code
+      inputCodes.forEach((input, index) => {
+        input.addEventListener("input", function (e) {
+          const value = e.target.value;
+          if (value && index < inputCodes.length - 1)
+            inputCodes[index + 1].focus();
+        });
+
+        input.addEventListener("keydown", function (e) {
+          if (e.key === "Backspace") {
+            if (!e.target.value && index > 0) {
+              inputCodes[index - 1].focus();
+              inputCodes[index - 1].value = "";
+              e.preventDefault();
+            }
+          }
+        });
+      });
     </script>
   </body>
 </html>

@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - Home Services</title>
-    <link rel="stylesheet" href="css/all.min.css" />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
@@ -14,20 +12,39 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
     />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/auth.css" />
   </head>
   <body>
-    <div class="auth-container">
+    <div class="auth-container bg-white text-center w-100 position-relative">
+      <h1
+        class="logo d-flex align-items-center justify-content-center gap-3 fw-bold fs-5"
+      >
+        <i class="fas fa-home"></i>
+
+        <span>Home Booking <span>Services</span></span>
+      </h1>
       <div class="auth-card">
         <h2>Register</h2>
         <form>
           <div class="input-group">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Full Name" name="name" required />
+            <input
+              type="text"
+              placeholder="Full Name"
+              name="name"
+              class="w-100"
+            />
           </div>
           <div class="input-group">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" name="email" required />
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              class="w-100"
+            />
           </div>
           <div class="input-group">
             <i class="fas fa-phone"></i>
@@ -35,7 +52,7 @@
               type="tel"
               placeholder="Phone Number"
               name="phone"
-              required
+              class="w-100"
             />
           </div>
           <div class="input-group">
@@ -44,7 +61,7 @@
               type="password"
               placeholder="Password"
               name="password"
-              required
+              class="w-100"
             />
           </div>
           <div class="input-group">
@@ -53,7 +70,7 @@
               type="password"
               placeholder="Confirm Password"
               name="confirmPassword"
-              required
+              class="w-100"
             />
           </div>
           <div class="input-group">
@@ -64,11 +81,12 @@
               <option value="provider">Service Provider</option>
             </select>
           </div>
-          <button type="submit" class="btn-primary">Register</button>
+          <button type="submit" class="btn btn-primary w-100">Register</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a></p>
       </div>
     </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script>

@@ -146,6 +146,14 @@
             <h1 class="page-title fw-semibold">Dashboard</h1>
           </div>
           <div class="header-right d-flex align-items-center">
+            <div id="searchOverlay" class="search-overlay d-none">
+              <div
+                class="custom-alert alert alert-primary text-center"
+                role="alert"
+              >
+                After ending writing, please press Enter ✌️
+              </div>
+            </div>
             <div class="search-box d-flex align-items-center position-relative">
               <input type="text" placeholder="Search for a service..." />
               <i class="fas fa-search position-absolute"></i>
@@ -520,8 +528,8 @@
                 >
                   <i class="fas fa-bolt"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Electrical Installation</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">Electrical Installation</h3>
+                <p class="mb-3 description">
                   Safe and professional electrical installation for home
                   appliances.
                 </p>
@@ -555,6 +563,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="Plumbing"
@@ -567,8 +576,8 @@
                 >
                   <i class="fas fa-tools"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Plumbing Repair</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">Plumbing Repair</h3>
+                <p class="mb-3 description">
                   Fixing leaks, broken pipes, and bathroom issues.
                 </p>
                 <div
@@ -601,6 +610,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="Appliance Repair"
@@ -613,8 +623,10 @@
                 >
                   <i class="fas fa-tools"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Air Conditioner Maintenance</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">
+                  Air Conditioner Maintenance
+                </h3>
+                <p class="mb-3 description">
                   Regular AC maintenance and filter cleaning services.
                 </p>
                 <div
@@ -647,6 +659,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="Cleaning"
@@ -659,8 +672,8 @@
                 >
                   <i class="fas fa-broom"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">House Cleaning</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">House Cleaning</h3>
+                <p class="mb-3 description">
                   Thorough house cleaning service for apartments and villas.
                 </p>
                 <div
@@ -693,6 +706,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="Plumbing"
@@ -705,8 +719,10 @@
                 >
                   <i class="fas fa-tools"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Water Heater Installation</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">
+                  Water Heater Installation
+                </h3>
+                <p class="mb-3 description">
                   Safe and quick installation of all types of water heaters.
                 </p>
                 <div
@@ -739,6 +755,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="Appliance Repair"
@@ -751,8 +768,8 @@
                 >
                   <i class="fas fa-tools"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Washing Machine Repair</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">Washing Machine Repair</h3>
+                <p class="mb-3 description">
                   Repair services for all brands of washing machines.
                 </p>
                 <div
@@ -785,6 +802,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="Cleaning"
@@ -797,8 +815,8 @@
                 >
                   <i class="fas fa-broom"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Pest Control</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">Pest Control</h3>
+                <p class="mb-3 description">
                   Effective pest control services using safe and approved
                   chemicals.
                 </p>
@@ -832,6 +850,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="Handyman"
@@ -844,8 +863,8 @@
                 >
                   <i class="fas fa-wrench"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Furniture Assembly</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">Furniture Assembly</h3>
+                <p class="mb-3 description">
                   Assembly services for all types of home and office furniture.
                 </p>
                 <div
@@ -878,6 +897,7 @@
                   </button>
                 </div>
               </div>
+
               <div
                 class="service-card bg-white text-center position-relative"
                 data-category="plumbing"
@@ -890,8 +910,8 @@
                 >
                   <i class="fas fa-tools"></i>
                 </div>
-                <h3 class="fw-semibold mb-2">Furniture Assembly</h3>
-                <p class="mb-3">
+                <h3 class="fw-semibold mb-2 title">Furniture Assembly</h3>
+                <p class="mb-3 description">
                   Assembly services for all types of home and office furniture.
                 </p>
                 <div
@@ -1564,21 +1584,25 @@
             id="settings"
             role="tabpanel"
           >
-            <div class="settings-section">
+            <div class="settings-section bg-white mb-20">
               <h3>Account Settings</h3>
-              <div class="setting-item">
+              <div
+                class="setting-item d-flex justify-content-between align-items-center"
+              >
                 <label>Change Password</label>
                 <button
                   type="button"
                   class="btn btn-secondary"
                   data-bs-toggle="modal"
-                  data-bs-target="#updatePhoneNumberModal"
+                  data-bs-target="#changePassModal"
                   id="changePassword"
                 >
                   Change
                 </button>
               </div>
-              <div class="setting-item">
+              <div
+                class="setting-item d-flex justify-content-between align-items-center"
+              >
                 <label>Update Email</label>
                 <button
                   type="button"
@@ -1590,13 +1614,15 @@
                   Update
                 </button>
               </div>
-              <div class="setting-item">
+              <div
+                class="setting-item d-flex justify-content-between align-items-center border-0"
+              >
                 <label>Update Phone Number</label>
                 <button
                   type="button"
                   class="btn btn-secondary"
                   data-bs-toggle="modal"
-                  data-bs-target="#updatePhoneNumberModal"
+                  data-bs-target="#updatePhoneModal"
                   id="updatePhoneNumber"
                 >
                   Update
@@ -1604,21 +1630,29 @@
               </div>
             </div>
 
-            <div class="settings-section">
+            <div class="settings-section bg-white">
               <h3>Notification Settings</h3>
-              <div class="setting-item">
+              <div
+                class="setting-item d-flex justify-content-between align-items-center"
+              >
                 <label>New Booking Notifications</label>
                 <input type="checkbox" checked />
               </div>
-              <div class="setting-item">
+              <div
+                class="setting-item d-flex justify-content-between align-items-center"
+              >
                 <label>Booking Confirmation Notifications</label>
                 <input type="checkbox" checked />
               </div>
-              <div class="setting-item">
+              <div
+                class="setting-item d-flex justify-content-between align-items-center"
+              >
                 <label>Review Notifications</label>
                 <input type="checkbox" checked />
               </div>
-              <div class="setting-item">
+              <div
+                class="setting-item d-flex justify-content-between align-items-center border-0"
+              >
                 <label>SMS Messages</label>
                 <input type="checkbox" />
               </div>
@@ -2046,19 +2080,19 @@
         </div>
       </div>
 
-      <!-- change password modal -->
+      <!-- Change password modal -->
       <div
         class="modal fade"
-        id="updatePhoneNumberModal"
+        id="changePassModal"
         tabindex="-1"
-        aria-labelledby="updatePhoneNumberModalLabel"
+        aria-labelledby="changePassModalLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="updatePhoneNumberModalLabel">
-                Change Phone Number
+                Change Password
               </h1>
               <button
                 type="button"
@@ -2080,7 +2114,7 @@
                   />
                 </div>
 
-                <div class="modal-footer">
+                <div class="mt-4 text-end">
                   <button
                     type="reset"
                     class="btn btn-secondary"
@@ -2132,7 +2166,7 @@
                   />
                 </div>
 
-                <div class="modal-footer">
+                <div class="mt-4 text-end">
                   <button
                     type="reset"
                     class="btn btn-secondary"
@@ -2184,7 +2218,7 @@
                   />
                 </div>
 
-                <div class="modal-footer">
+                <div class="mt-4 text-end">
                   <button
                     type="reset"
                     class="btn btn-secondary"

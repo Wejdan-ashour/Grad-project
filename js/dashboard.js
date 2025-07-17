@@ -48,7 +48,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updatePageTitle(lastPage);
   }
+
+  // For Search Services
+  const searchInput = document.querySelector(".search-box input");
+  const overlay = document.getElementById("searchOverlay");
+  const servicesNavLink = document.querySelector('.nav-link[href="#services"]');
+
+  let overlayShown = false;
+
+  searchInput.addEventListener("focus", function () {
+    if (!overlayShown) {
+      overlay.classList.remove("d-none"); // Show overlay
+      overlayShown = true;
+
+      // Hide after 0.5s
+      setTimeout(() => {
+        overlay.classList.add("d-none");
+      }, 3000);
+    }
+  });
+
+  searchInput.addEventListener("keydown", function (e) {
+    const value = searchInput.value.trim();
+
+    if (value && e.key === "Enter") {
+      if (servicesNavLink) servicesNavLink.click();
+    }
+  });
 });
+
+function initServiceSearch() {
+  const searchInput = document.querySelector(".search-box input");
+  const serviceCards = document.querySelectorAll(
+    ".services-grid .service-card"
+  );
+
+  searchInput.addEventListener("input", function (e) {
+    const query = searchInput.value.trim().toLowerCase();
+
+    serviceCards.forEach((card) => {
+      const serviceName = card
+        .querySelector(".title")
+        ?.textContent.trim()
+        .toLowerCase();
+      const description = card
+        .querySelector(".description")
+        ?.textContent.trim()
+        .toLowerCase();
+
+      const matches =
+        serviceName?.includes(query) || description?.includes(query);
+
+      card.style.display = matches ? "block" : "none";
+
+      if (query.length < 3) {
+        card.style.display = "block";
+      }
+    });
+  });
+}
 
 const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.querySelector(".sidebar");
@@ -160,6 +218,7 @@ function setupDashboardPage() {
 
 /* Logic Services Page */
 function setupServicesPage() {
+  initServiceSearch();
   handleFav();
   const filterSelect = document.querySelector(".services-page .filter-select");
   const sortSelect = document.querySelector(".services-page .sort-select");

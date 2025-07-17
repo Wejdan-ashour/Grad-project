@@ -150,7 +150,7 @@ img {
   -moz-transition: transform 0.3s ease;
   -ms-transition: transform 0.3s ease;
   -o-transition: transform 0.3s ease;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .sidebar-header {
@@ -1298,23 +1298,14 @@ aside .nav-link i {
 }
 
 .settings-section {
-  background: white;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 
 .setting-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 15px 0;
   border-bottom: 1px solid #f0f0f0;
-}
-
-.setting-item:last-child {
-  border-bottom: none;
 }
 
 .setting-item select {
@@ -1525,24 +1516,28 @@ textarea#comment {
   & .review-date {
     font-size: 0.8rem;
   }
+}
 
-  & .settings-section {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background */
+  z-index: 9999; /* Above everything */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  & .setting-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  & .setting-item:last-child {
-    border-bottom: none;
-  }
+.custom-alert {
+  /* font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); */
+  position: absolute;
+  top: 30px; /* Show at top */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
 }

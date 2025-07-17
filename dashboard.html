@@ -991,7 +991,9 @@
             </div>
 
             <div class="bookings-table bg-white overflow-hidden">
-              <div class="booking-row d-grid align-items-center header">
+              <div
+                class="booking-row header d-grid align-items-center fw-semibold"
+              >
                 <div>Service</div>
                 <div>Service Provider</div>
                 <div>Date</div>
@@ -1239,16 +1241,18 @@
 
           <!-- Main Profile Content -->
           <div class="tab-pane fade profile-page" id="profile" role="tabpanel">
-            <div class="profile-header">
+            <div
+              class="profile-header bg-white d-flex align-items-center gap-20"
+            >
               <img
                 src="/public/assest/amiii.png"
                 alt="Profile Image"
-                class="profile-avatar"
+                class="object-fit-cover rounded-circle profile-avatar"
               />
               <div class="profile-info">
                 <h2>Abood Bilal</h2>
                 <p>Customer since 2025</p>
-                <div class="profile-stats">
+                <div class="d-flex gap-20 text-gray mt-10 profile-stats">
                   <span>10 Completed Bookings</span>
                   <span>Average Rating: 4.7</span>
                   <span>Member since June 2025</span>
@@ -1263,38 +1267,38 @@
               </button>
             </div>
 
-            <div class="profile-sections">
-              <div class="profile-section">
+            <div class="profile-sections d-grid gap-20">
+              <div class="profile-section bg-white mb-20">
                 <h3>Personal Information</h3>
-                <div class="info-grid">
-                  <div class="info-item">
-                    <label>Full Name</label>
+                <div class="info-grid d-grid gap-20 mt-20">
+                  <div class="info-item d-flex flex-column">
+                    <label class="text-gray fw-semibold">Full Name</label>
                     <span>Abood Bilal</span>
                   </div>
-                  <div class="info-item">
-                    <label>Phone Number</label>
+                  <div class="info-item d-flex flex-column">
+                    <label class="text-gray fw-semibold">Phone Number</label>
                     <span>+966 55 123 4567</span>
                   </div>
-                  <div class="info-item">
-                    <label>Email</label>
+                  <div class="info-item d-flex flex-column">
+                    <label class="text-gray fw-semibold">Email</label>
                     <span>a@b.com</span>
                   </div>
-                  <div class="info-item">
-                    <label>City</label>
+                  <div class="info-item d-flex flex-column">
+                    <label class="text-gray fw-semibold">City</label>
                     <span>Gaza</span>
                   </div>
-                  <div class="info-item">
-                    <label>Address</label>
+                  <div class="info-item d-flex flex-column">
+                    <label class="text-gray fw-semibold">Address</label>
                     <span>Tel-Alhaw Gaza-strip - Palestine</span>
                   </div>
-                  <div class="info-item">
-                    <label>Date of Birth</label>
+                  <div class="info-item d-flex flex-column">
+                    <label class="text-gray fw-semibold">Date of Birth</label>
                     <span>Dec 31, 2002</span>
                   </div>
                 </div>
               </div>
 
-              <div class="profile-section">
+              <div class="profile-section bg-white mb-20">
                 <h3>Account Statistics</h3>
                 <div class="account-stats">
                   <div class="stat-item">

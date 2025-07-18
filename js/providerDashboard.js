@@ -70,8 +70,6 @@ document.addEventListener("click", (e) => {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault();
-
     const page = link.getAttribute("href")?.substring(1);
 
     if (page === "bookings") setupBookingsPage(page);

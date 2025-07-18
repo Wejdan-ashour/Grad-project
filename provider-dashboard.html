@@ -20,10 +20,12 @@
   <body>
     <div class="dashboard-container d-flex min-vh-100">
       <!-- Sidebar -->
-      <aside class="sidebar text-white overflow-y-auto position-fixed vh-100">
-        <div class="sidebar-header">
+      <aside
+        class="sidebar text-white overflow-y-auto position-fixed vh-100 z-1"
+      >
+        <div class="sidebar-header p-20">
           <a
-            class="logo text-decoration-none text-white d-flex align-items-center gap- fw-bold fs-5"
+            class="logo text-decoration-none text-white d-flex align-items-center gap-10 fw-bold fs-5"
             href="/provider-dashboard.html"
           >
             <i class="fas fa-home"></i>
@@ -31,7 +33,7 @@
           </a>
         </div>
 
-        <nav class="sidebar-nav">
+        <nav class="sidebar-nav py-20 px-0">
           <ul
             class="list-unstyled nav flex-column"
             id="v-pills-tab"
@@ -45,7 +47,7 @@
                 href="#dashboard"
                 role="tab"
               >
-                <i class="fas fa-tachometer-alt text-cente"></i>
+                <i class="fas fa-tachometer-alt text-center"></i>
                 <span>Dashboard</span>
               </a>
             </li>
@@ -123,10 +125,10 @@
             </li>
             <li class="nav-item">
               <a
-                class="btn w-100 d-flex align-items-center nav-link"
-                href="login.html"
+                class="nav-link text-decoration-none d-flex align-items-center"
+                href="/index.html"
               >
-                <i class="fas fa-sign-out-alt"></i>
+                <i class="fas fa-sign-out-alt text-center"></i>
                 <span>Logout</span>
               </a>
             </li>
@@ -146,7 +148,7 @@
             </button>
             <h1 class="page-title fw-semibold">Dashboard</h1>
           </div>
-          <div class="header-right d-flex align-items-center">
+          <div class="header-right d-flex align-items-center gap-20">
             <div class="notifications">
               <button
                 id="notificationBell"
@@ -159,7 +161,7 @@
                 >
               </button>
             </div>
-            <div class="user-profile d-flex align-items-center">
+            <div class="user-profile d-flex align-items-center gap-10">
               <img
                 src="public/assest/default-avatar.jpg"
                 alt="User Avatar"
@@ -177,58 +179,66 @@
             id="dashboard"
             role="tabpanel"
           >
-            <div class="stats-grid">
-              <div class="stat-card">
-                <div class="stat-icon">
+            <div class="stats-grid d-grid gap-20">
+              <div class="stat-card bg-white d-flex align-items-center gap-20">
+                <div
+                  class="stat-icon d-flex align-items-center justify-content-center text-white"
+                >
                   <i class="fas fa-calendar-check"></i>
                 </div>
                 <div class="stat-info">
                   <h3>Today's Bookings</h3>
-                  <p class="stat-number">12</p>
-                  <span class="stat-change positive">+15%</span>
+                  <p class="stat-number fw-bold">12</p>
+                  <span class="stat-change positive fw-medium">+15%</span>
                 </div>
               </div>
 
-              <div class="stat-card">
-                <div class="stat-icon">
+              <div class="stat-card bg-white d-flex align-items-center gap-20">
+                <div
+                  class="stat-icon d-flex align-items-center justify-content-center text-white"
+                >
                   <i class="fas fa-dollar-sign"></i>
                 </div>
                 <div class="stat-info">
                   <h3>Monthly Earnings</h3>
-                  <p class="stat-number">2,450 $</p>
-                  <span class="stat-change positive">+8%</span>
+                  <p class="stat-number fw-bold">2,450 $</p>
+                  <span class="stat-change positive fw-medium">+8%</span>
                 </div>
               </div>
 
-              <div class="stat-card">
-                <div class="stat-icon">
+              <div class="stat-card bg-white d-flex align-items-center gap-20">
+                <div
+                  class="stat-icon d-flex align-items-center justify-content-center text-white"
+                >
                   <i class="fas fa-star"></i>
                 </div>
                 <div class="stat-info">
                   <h3>Overall Rating</h3>
-                  <p class="stat-number">4.8</p>
-                  <span class="stat-change positive">+0.2</span>
+                  <p class="stat-number fw-bold">4.8</p>
+                  <span class="stat-change positive fw-medium">+0.2</span>
                 </div>
               </div>
 
-              <div class="stat-card">
-                <div class="stat-icon">
+              <div class="stat-card bg-white d-flex align-items-center gap-20">
+                <div
+                  class="stat-icon d-flex align-items-center justify-content-center text-white"
+                >
                   <i class="fas fa-users"></i>
                 </div>
                 <div class="stat-info">
                   <h3>New Customers</h3>
-                  <p class="stat-number">28</p>
-                  <span class="stat-change positive">+12%</span>
+                  <p class="stat-number fw-bold">28</p>
+                  <span class="stat-change positive fw-medium">+12%</span>
                 </div>
               </div>
             </div>
 
             <!-- Upcoming Bookings -->
-            <div class="upcoming-bookings bg-white">
-              <h2 class="fs-3 fw-semibold">Upcoming Bookings</h2>
+            <div class="upcoming-bookings bg-white mb-3">
+              <h2 class="fs-3 fw-semibold pb-2 mb-3">Upcoming Bookings</h2>
               <div class="bookings-list d-flex flex-column gap-3">
                 <div
-                  class="booking-item d-flex justify-content-between align-items-center"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center"
                 >
                   <div class="booking-info">
                     <h4 class="fs-6 fw-semibold mb-1">AC Maintenance</h4>
@@ -236,27 +246,27 @@
                     <p>Time: Today 2:00 PM</p>
                   </div>
                   <div class="booking-actions">
-                    <button class="btn btn-primary">Accept</button>
+                    <button gap-10 class="btn btn-primary">Accept</button>
                     <button class="btn btn-secondary">Reject</button>
                   </div>
                 </div>
 
                 <div
-                  class="booking-item d-flex justify-content-between align-items-center"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center"
                 >
                   <div class="booking-info">
                     <h4 class="fs-6 fw-semibold mb-1">Home Cleaning</h4>
                     <p>Client: Mohamed Ali</p>
                     <p>Time: Tomorrow 10:00 AM</p>
                   </div>
-                  <div class="booking-actions d-flex">
+                  <div class="booking-actions d-flex gap-10">
                     <button class="btn btn-primary">Accept</button>
                     <button class="btn btn-secondary">Reject</button>
                   </div>
                 </div>
 
                 <div
-                  class="booking-item d-flex justify-content-between align-items-center"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center"
                 >
                   <div class="booking-info">
                     <h4 class="fs-6 fw-semibold mb-1">Plumbing Repair</h4>
@@ -264,7 +274,7 @@
                     <p>Time: Day after tomorrow 4:00 PM</p>
                   </div>
                   <div class="booking-actions">
-                    <button class="btn btn-primary">Accept</button>
+                    <button gap-10 class="btn btn-primary">Accept</button>
                     <button class="btn btn-secondary">Reject</button>
                   </div>
                 </div>
@@ -273,14 +283,14 @@
 
             <!-- Recent Reviews -->
             <div class="recent-reviews bg-white">
-              <h2 class="fs-3 fw-semibold">Recent Reviews</h2>
+              <h2 class="fs-3 fw-semibold pb-2 mb-3">Recent Reviews</h2>
               <div class="reviews-list d-flex flex-column gap-3">
                 <div class="review-item">
                   <div
                     class="review-header d-flex justify-content-between align-items-center mb-10"
                   >
                     <span class="customer-name fw-semibold">Ahmed Mahmoud</span>
-                    <div class="rating d-flex gap-1">
+                    <div class="rating d-flex">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -298,7 +308,7 @@
                     class="review-header d-flex justify-content-between align-items-center mb-10"
                   >
                     <span class="customer-name fw-semibold">Noura Salem</span>
-                    <div class="rating">
+                    <div class="rating d-flex">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -332,9 +342,9 @@
                 Add New Service
               </button>
             </div>
-            <div class="services-grid">
+            <div class="services-grid d-grid gap-20">
               <div
-                class="service-card d-flex flex-column justify-content-center align-items-center"
+                class="service-card p-20 d-flex flex-column justify-content-center align-items-center"
               >
                 <div
                   class="service-icon text-white d-flex justify-content-center align-items-center rounded-circle mb-3"
@@ -361,7 +371,7 @@
                 </div>
               </div>
               <div
-                class="service-card d-flex flex-column justify-content-center align-items-center"
+                class="service-card p-20 d-flex flex-column justify-content-center align-items-center"
               >
                 <div
                   class="service-icon text-white d-flex justify-content-center align-items-center rounded-circle mb-3"
@@ -473,7 +483,11 @@
                 <div>Sara Ahmed</div>
                 <div>2024-01-15</div>
                 <div>2:00 PM</div>
-                <div><span class="status pending">Pending</span></div>
+                <div>
+                  <span class="status fw-medium text-center pending"
+                    >Pending</span
+                  >
+                </div>
                 <div>
                   <button class="btn btn-primary btn-sm">Accept</button>
                   <button class="btn btn-secondary btn-sm">Reject</button>
@@ -488,7 +502,11 @@
                 <div>Mohamed Ali</div>
                 <div>2024-01-16</div>
                 <div>10:00 AM</div>
-                <div><span class="status confirmed">Confirmed</span></div>
+                <div>
+                  <span class="status fw-medium text-center confirmed"
+                    >Confirmed</span
+                  >
+                </div>
                 <div>
                   <button
                     class="btn btn-primary btn-sm"
@@ -508,7 +526,11 @@
                 <div>Fatima Khalid</div>
                 <div>2024-01-17</div>
                 <div>4:00 PM</div>
-                <div><span class="status completed">Completed</span></div>
+                <div>
+                  <span class="status fw-medium text-center completed"
+                    >Completed</span
+                  >
+                </div>
                 <div>
                   <button
                     class="btn btn-primary btn-sm"
@@ -591,10 +613,10 @@
               <div class="profile-section bg-white mb-20">
                 <h3>Specialized Services</h3>
                 <div class="d-flex flex-wrap gap-10 specialties">
-                  <span class="specialty-tag">AC Maintenance</span>
-                  <span class="specialty-tag">Home Cleaning</span>
-                  <span class="specialty-tag">Plumbing Repair</span>
-                  <span class="specialty-tag">Electricity</span>
+                  <span class="specialty-tag text-white">AC Maintenance</span>
+                  <span class="specialty-tag text-white">Home Cleaning</span>
+                  <span class="specialty-tag text-white">Plumbing Repair</span>
+                  <span class="specialty-tag text-white">Electricity</span>
                 </div>
               </div>
             </div>
@@ -693,7 +715,7 @@
                   <div class="reviewer-info flex-grow-1">
                     <h4>Ahmed Mahmoud</h4>
                     <div class="d-flex align-items-center gap-2">
-                      <div class="rating">
+                      <div class="rating d-flex">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -725,7 +747,7 @@
                   <div class="reviewer-info flex-grow-1">
                     <h4>Noura Salem</h4>
                     <div class="d-flex align-items-center gap-2">
-                      <div class="rating">
+                      <div class="rating d-flex">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -1114,7 +1136,9 @@ Effective pest control services using safe and approved chemicals.
                 </p>
                 <p>
                   <strong>Status:</strong>
-                  <span class="status completed">Completed</span>
+                  <span class="status fw-medium text-center completed"
+                    >Completed</span
+                  >
                 </p>
               </div>
 

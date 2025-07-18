@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.querySelector(".search-box input");
   const overlay = document.getElementById("searchOverlay");
   const servicesNavLink = document.querySelector('.nav-link[href="#services"]');
+  const closeBtn = document.querySelector(".custom-alert button");
 
   let overlayShown = false;
 
@@ -61,10 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
       overlay.classList.remove("d-none"); // Show overlay
       overlayShown = true;
 
-      // Hide after 0.5s
+      // Hide after 2s
       setTimeout(() => {
         overlay.classList.add("d-none");
-      }, 3000);
+      }, 2000);
     }
   });
 
@@ -73,6 +74,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (value && e.key === "Enter") {
       if (servicesNavLink) servicesNavLink.click();
+    }
+  });
+  closeBtn.addEventListener("click", function (e) {
+    overlayShown = true;
+    overlay.classList.add("d-none");
+  });
+
+  const viwNotificationBtn = document.getElementById("viweNotificationBtn");
+  viwNotificationBtn.addEventListener("click", function (e) {
+    const notificationNavLink = document.querySelector(
+      ".nav-link[href='#notifications']"
+    );
+
+    if (viwNotificationBtn) {
+      notificationNavLink.click();
     }
   });
 });
@@ -129,7 +145,6 @@ document.addEventListener("click", (e) => {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    // Get the Requested page
     const page = link.getAttribute("href")?.substring(1);
 
     if (page === "dashboard") setupDashboardPage();
@@ -139,10 +154,8 @@ navLinks.forEach((link) => {
 
     updatePageTitle(page);
 
-    // Save last visited tab in localStorage
     localStorage.setItem("lastVisitedPage", page);
 
-    // Close sidebar on small screens
     if (window.innerWidth <= 768) {
       sidebar.classList.remove("active");
     }

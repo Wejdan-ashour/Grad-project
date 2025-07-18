@@ -19,15 +19,17 @@
   <body>
     <div class="dashboard-container d-flex min-vh-100">
       <!-- Sidebar -->
-      <aside class="sidebar text-white overflow-y-auto position-fixed vh-100">
-        <div class="sidebar-header">
+      <aside
+        class="sidebar text-white overflow-y-auto position-fixed vh-100 z-1"
+      >
+        <div class="sidebar-header p-20">
           <a
-            class="logo text-decoration-none text-white d-flex align-items-center gap- fw-bold fs-5"
+            class="logo text-decoration-none text-white d-flex align-items-center gap-10 fw-bold fs-5"
             href="#"
             ><i class="fas fa-home"></i><span>Home Services</span></a
           >
         </div>
-        <nav class="sidebar-nav">
+        <nav class="sidebar-nav py-20 px-0">
           <ul
             class="list-unstyled nav flex-column"
             id="v-pills-tab"
@@ -126,7 +128,8 @@
                 class="nav-link text-decoration-none d-flex align-items-center"
                 href="/index.html"
               >
-                <i class="fas fa-sign-out-alt text-center"></i> Logout
+                <i class="fas fa-sign-out-alt text-center"></i>
+                <span>Logout</span>
               </a>
             </li>
           </ul>
@@ -145,13 +148,14 @@
             </button>
             <h1 class="page-title fw-semibold">Dashboard</h1>
           </div>
-          <div class="header-right d-flex align-items-center">
+          <div class="header-right d-flex align-items-center gap-20">
             <div id="searchOverlay" class="search-overlay d-none">
               <div
-                class="custom-alert alert alert-primary text-center"
+                class="custom-alert alert alert-light text-center d-flex align-items-center"
                 role="alert"
               >
-                After ending writing, please press Enter ✌️
+                <span>After ending writing, please press Enter ✌️</span>
+                <button class="btn-close ms-3"></button>
               </div>
             </div>
             <div class="search-box d-flex align-items-center position-relative">
@@ -202,19 +206,16 @@
                 </li>
 
                 <li class="text-center">
-                  <!-- Use data-bs-toggle/tab if it's a tab, or href to full page -->
-                  <a
+                  <button
                     class="btn btn-sm btn-primary"
-                    href="#notifications"
-                    data-bs-toggle="tab"
-                    data-bs-target="#notifications"
+                    id="viweNotificationBtn"
                   >
                     View All Notifications
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
-            <div class="user-profile d-flex align-items-center">
+            <div class="user-profile d-flex align-items-center gap-10">
               <img
                 src="public/assest/amiii.png"
                 alt="User Avatar"
@@ -235,8 +236,8 @@
           >
             <!-- Quick Actions -->
             <div class="quick-actions">
-              <h2>Quick Actions</h2>
-              <div class="actions-grid">
+              <h2 class="fw-semibold mb-20 pb-10">Quick Actions</h2>
+              <div class="actions-grid d-grid gap-20">
                 <div class="action-card bg-white text-center">
                   <div
                     class="action-icon mt-0 mx-auto mb-3 d-flex align-items-center justify-content-center text-white"
@@ -299,10 +300,10 @@
 
             <!-- Recent Bookings -->
             <div class="recent-bookings mt-5 mb-5">
-              <h2>Recent Bookings</h2>
+              <h2 class="fw-semibold mb-20 pb-10">Recent Bookings</h2>
               <div class="bookings-list d-flex flex-column gap-3">
                 <div
-                  class="booking-item d-flex justify-content-between align-items-center bg-white"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center bg-white"
                 >
                   <div class="d-flex align-items-center gap-3 booking-info">
                     <div
@@ -318,9 +319,11 @@
                     </div>
                   </div>
                   <div
-                    class="d-flex flex-column align-items-center booking-status"
+                    class="d-flex flex-column align-items-center gap-10 booking-status"
                   >
-                    <span class="status completed">Completed</span>
+                    <span class="status fw-medium text-center completed"
+                      >Completed</span
+                    >
                     <div class="rating">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -332,7 +335,7 @@
                 </div>
 
                 <div
-                  class="booking-item d-flex justify-content-between align-items-center rounded bg-white"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center rounded bg-white"
                 >
                   <div class="d-flex align-items-center gap-3 booking-info">
                     <div
@@ -348,9 +351,11 @@
                     </div>
                   </div>
                   <div
-                    class="d-flex flex-column align-items-center booking-status"
+                    class="d-flex flex-column align-items-center gap-10 booking-status"
                   >
-                    <span class="status confirmed">Confirmed</span>
+                    <span class="status fw-medium text-center confirmed"
+                      >Confirmed</span
+                    >
                     <button
                       class="btn btn-sm btn-primary"
                       data-bs-toggle="modal"
@@ -362,7 +367,7 @@
                 </div>
 
                 <div
-                  class="booking-item d-flex justify-content-between align-items-center rounded bg-white"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center rounded bg-white"
                 >
                   <div class="d-flex align-items-center gap-3 booking-info">
                     <div
@@ -378,9 +383,11 @@
                     </div>
                   </div>
                   <div
-                    class="d-flex flex-column align-items-center booking-status"
+                    class="d-flex flex-column align-items-center gap-10 booking-status"
                   >
-                    <span class="status pending">Pending</span>
+                    <span class="status fw-medium text-center pending"
+                      >Pending</span
+                    >
                     <button class="btn btn-sm btn-secondary">Cancel</button>
                   </div>
                 </div>
@@ -389,9 +396,9 @@
 
             <!-- Popular Services -->
             <div class="popular-services bg-white">
-              <h2>Popular Services</h2>
-              <div class="services-grid">
-                <div class="service-card bg-white text-center">
+              <h2 class="fw-semibold mb-20 pb-10">Popular Services</h2>
+              <div class="services-grid d-grid gap-20">
+                <div class="service-card p-20 bg-white text-center">
                   <div
                     class="service-image d-flex align-items-center justify-content-center text-white rounded-circle"
                   >
@@ -400,7 +407,7 @@
                   <h3 class="fw-semibold mb-2">AC Maintenance</h3>
                   <p class="mb-3">Cleaning and maintenance of AC units</p>
                   <div
-                    class="service-rating d-flex align-items-center justify-content-center mb-3"
+                    class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                   >
                     <div class="rating">
                       <i class="fas fa-star"></i>
@@ -421,7 +428,7 @@
                   </button>
                 </div>
 
-                <div class="service-card bg-white text-center">
+                <div class="service-card p-20 bg-white text-center">
                   <div
                     class="service-image d-flex align-items-center justify-content-center text-white rounded-circle"
                   >
@@ -432,7 +439,7 @@
                     Comprehensive cleaning for homes and offices
                   </p>
                   <div
-                    class="service-rating d-flex align-items-center justify-content-center mb-3"
+                    class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                   >
                     <div class="rating">
                       <i class="fas fa-star"></i>
@@ -453,7 +460,7 @@
                   </button>
                 </div>
 
-                <div class="service-card bg-white text-center">
+                <div class="service-card p-20 bg-white text-center">
                   <div
                     class="service-image d-flex align-items-center justify-content-center text-white rounded-circle"
                   >
@@ -464,7 +471,7 @@
                     Repair and maintenance of pipes and faucets
                   </p>
                   <div
-                    class="service-rating d-flex align-items-center justify-content-center mb-3"
+                    class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                   >
                     <div class="rating">
                       <i class="fas fa-star"></i>
@@ -515,9 +522,9 @@
                 </select>
               </div>
             </div>
-            <div class="services-grid">
+            <div class="services-grid d-grid gap-20">
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Electrical"
               >
                 <button class="btn p-0 fav-btn">
@@ -534,7 +541,7 @@
                   appliances.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -565,7 +572,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Plumbing"
               >
                 <button class="btn p-0 fav-btn">
@@ -581,7 +588,7 @@
                   Fixing leaks, broken pipes, and bathroom issues.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -612,7 +619,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Appliance Repair"
               >
                 <button class="btn p-0 fav-btn">
@@ -630,7 +637,7 @@
                   Regular AC maintenance and filter cleaning services.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -661,7 +668,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Cleaning"
               >
                 <button class="btn p-0 fav-btn">
@@ -677,7 +684,7 @@
                   Thorough house cleaning service for apartments and villas.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -708,7 +715,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Plumbing"
               >
                 <button class="btn p-0 fav-btn">
@@ -726,7 +733,7 @@
                   Safe and quick installation of all types of water heaters.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -757,7 +764,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Appliance Repair"
               >
                 <button class="btn p-0 fav-btn">
@@ -773,7 +780,7 @@
                   Repair services for all brands of washing machines.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -804,7 +811,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Cleaning"
               >
                 <button class="btn p-0 fav-btn">
@@ -821,7 +828,7 @@
                   chemicals.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -852,7 +859,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="Handyman"
               >
                 <button class="btn p-0 fav-btn">
@@ -868,7 +875,7 @@
                   Assembly services for all types of home and office furniture.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -899,7 +906,7 @@
               </div>
 
               <div
-                class="service-card bg-white text-center position-relative"
+                class="service-card p-20 bg-white text-center position-relative"
                 data-category="plumbing"
               >
                 <button class="btn p-0 fav-btn">
@@ -915,7 +922,7 @@
                   Assembly services for all types of home and office furniture.
                 </p>
                 <div
-                  class="service-rating d-flex align-items-center justify-content-center mb-3"
+                  class="service-rating d-flex align-items-center justify-content-center gap-10 mb-3"
                 >
                   <div class="rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i
@@ -1032,7 +1039,11 @@
                 <div>2024-01-15</div>
                 <div>2:00 PM</div>
                 <div class="text-success fw-semibold">$150</div>
-                <div><span class="status completed">Completed</span></div>
+                <div>
+                  <span class="status fw-medium text-center completed"
+                    >Completed</span
+                  >
+                </div>
                 <div>
                   <button
                     class="btn btn-primary btn-sm details-btn"
@@ -1053,7 +1064,11 @@
                 <div>2024-01-18</div>
                 <div>10:00 AM</div>
                 <div class="text-success fw-semibold">$200</div>
-                <div><span class="status confirmed">Confirmed</span></div>
+                <div>
+                  <span class="status fw-medium text-center confirmed"
+                    >Confirmed</span
+                  >
+                </div>
                 <div>
                   <button
                     type="button"
@@ -1083,7 +1098,11 @@
                 <div>2024-01-20</div>
                 <div>4:00 PM</div>
                 <div class="text-success fw-semibold">$120</div>
-                <div><span class="status pending">Pending</span></div>
+                <div>
+                  <span class="status fw-medium text-center pending"
+                    >Pending</span
+                  >
+                </div>
                 <div>
                   <button class="btn btn-primary btn-sm confirm-btn">
                     Confirm
@@ -1107,7 +1126,11 @@
                 <div>2024-01-22</div>
                 <div>11:00 AM</div>
                 <div class="text-success fw-semibold">$180</div>
-                <div><span class="status confirmed">Confirmed</span></div>
+                <div>
+                  <span class="status fw-medium text-center confirmed"
+                    >Confirmed</span
+                  >
+                </div>
                 <div>
                   <button
                     type="button"
@@ -1148,20 +1171,22 @@
             >
               <h2>Favorite Service Providers</h2>
             </div>
-            <div class="favorites-grid">
+            <div class="favorites-grid d-grid gap-20">
               <div
                 class="favorite-provider bg-white p-20 d-flex align-items-center gap-20"
               >
                 <img
                   src="public/assest/ahmed.jpeg"
                   alt="provider-image"
-                  class="provider-avatar"
+                  class="provider-avatar rounded-circle object-fit-cover"
                 />
-                <div class="provider-info">
+                <div class="provider-info flex-fill">
                   <h3 class="fs-5 fw-semibold">Ahmed Mohamed</h3>
                   <p class="text-gray">AC Maintenance Specialist</p>
-                  <div class="provider-stats">
-                    <div class="rating">
+                  <div
+                    class="provider-stats d-flex align-items-center gap-10 my-10 mx-0"
+                  >
+                    <div class="rating d-flex">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -1170,12 +1195,12 @@
                     </div>
                     <span>4.8 (156 reviews)</span>
                   </div>
-                  <div class="provider-details">
+                  <div class="provider-details d-flex flex-column">
                     <span>15 completed services with you</span>
                     <span>Member since 2022</span>
                   </div>
                 </div>
-                <div class="provider-actions">
+                <div class="provider-actions d-flex flex-column gap-10">
                   <a class="btn btn-primary" href="mailto:abood@hotmail.com"
                     >Message</a
                   >
@@ -1191,13 +1216,15 @@
                 <img
                   src="public/assest/anime-boy-chill-digital-art-hd-wallpaper-uhdpaper.com-284@0@j.jpg"
                   alt="provider-image"
-                  class="provider-avatar"
+                  class="provider-avatar rounded-circle object-fit-cover"
                 />
-                <div class="provider-info">
+                <div class="provider-info flex-fill">
                   <h3 class="fs-5 fw-semibold">Fatima Ali</h3>
                   <p class="text-gray">Home Cleaning Specialist</p>
-                  <div class="provider-stats">
-                    <div class="rating">
+                  <div
+                    class="provider-stats d-flex align-items-center gap-10 my-10 mx-0"
+                  >
+                    <div class="rating d-flex">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -1206,12 +1233,12 @@
                     </div>
                     <span>4.6 (89 reviews)</span>
                   </div>
-                  <div class="provider-details">
+                  <div class="provider-details d-flex flex-column">
                     <span>8 completed services with you</span>
                     <span>Member since 2023</span>
                   </div>
                 </div>
-                <div class="provider-actions">
+                <div class="provider-actions d-flex flex-column gap-10">
                   <a class="btn btn-primary" href="mailto:eissam@hotmail.com"
                     >Message</a
                   >
@@ -1227,13 +1254,15 @@
                 <img
                   src="public/assest/DavidChen.jpg"
                   alt="provider-image"
-                  class="provider-avatar"
+                  class="provider-avatar rounded-circle object-fit-cover"
                 />
-                <div class="provider-info">
+                <div class="provider-info flex-fill">
                   <h3 class="fs-5 fw-semibold">Mohamed Khaled</h3>
                   <p class="text-gray">Plumbing Repair Specialist</p>
-                  <div class="provider-stats">
-                    <div class="rating">
+                  <div
+                    class="provider-stats d-flex align-items-center gap-10 my-10 mx-0"
+                  >
+                    <div class="rating d-flex">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -1242,12 +1271,12 @@
                     </div>
                     <span>4.9 (203 reviews)</span>
                   </div>
-                  <div class="provider-details">
+                  <div class="provider-details d-flex flex-column">
                     <span>12 completed services with you</span>
                     <span>Member since 2021</span>
                   </div>
                 </div>
-                <div class="provider-actions">
+                <div class="provider-actions d-flex flex-column gap-10">
                   <a class="btn btn-primary" href="mailto:bilalQat@hotmail.com">
                     Message
                   </a>
@@ -1320,21 +1349,21 @@
 
               <div class="profile-section bg-white mb-20">
                 <h3>Account Statistics</h3>
-                <div class="account-stats">
-                  <div class="stat-item">
-                    <div class="stat-number">20</div>
+                <div class="account-stats d-grid gap-20 mt-20">
+                  <div class="stat-item text-center p-20">
+                    <div class="stat-number fw-bold">20</div>
                     <div class="stat-label">Completed Bookings</div>
                   </div>
-                  <div class="stat-item">
-                    <div class="stat-number">4.7</div>
+                  <div class="stat-item text-center p-20">
+                    <div class="stat-number fw-bold">4.7</div>
                     <div class="stat-label">Average Rating</div>
                   </div>
-                  <div class="stat-item">
-                    <div class="stat-number">12</div>
+                  <div class="stat-item text-center p-20">
+                    <div class="stat-number fw-bold">12</div>
                     <div class="stat-label">Favorite Service Providers</div>
                   </div>
-                  <div class="stat-item">
-                    <div class="stat-number">2,450</div>
+                  <div class="stat-item text-center p-20">
+                    <div class="stat-number fw-bold">2,450</div>
                     <div class="stat-label">Total Amount Paid ($)</div>
                   </div>
                 </div>
@@ -1357,13 +1386,17 @@
               </button>
             </div>
 
-            <div class="notifications-list">
-              <div class="notification-item unread">
-                <div class="notification-icon">
+            <div class="notifications-list d-flex flex-column">
+              <div
+                class="notification-item bg-white p-20 d-flex align-items-center unread"
+              >
+                <div
+                  class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
+                >
                   <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="notification-content">
-                  <h4>Your Booking is Confirmed</h4>
+                <div class="notification-content flex-fill">
+                  <h4 class="fs-6 fw-semibold">Your Booking is Confirmed</h4>
                   <p>
                     Your home cleaning service booking with Fatima Ali for
                     January 18 at 10:00 AM is confirmed.
@@ -1378,12 +1411,16 @@
                 </button>
               </div>
 
-              <div class="notification-item unread">
-                <div class="notification-icon">
+              <div
+                class="notification-item bg-white p-20 d-flex align-items-center unread"
+              >
+                <div
+                  class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
+                >
                   <i class="fas fa-star"></i>
                 </div>
-                <div class="notification-content">
-                  <h4>Rate Your Service</h4>
+                <div class="notification-content flex-fill">
+                  <h4 class="fs-6 fw-semibold">Rate Your Service</h4>
                   <p>
                     Don't forget to rate the AC maintenance service completed by
                     Ahmed Mohamed. Your feedback matters!
@@ -1398,12 +1435,16 @@
                 </button>
               </div>
 
-              <div class="notification-item">
-                <div class="notification-icon">
+              <div
+                class="notification-item bg-white p-20 d-flex align-items-center"
+              >
+                <div
+                  class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
+                >
                   <i class="fas fa-gift"></i>
                 </div>
-                <div class="notification-content">
-                  <h4>Special Offer</h4>
+                <div class="notification-content flex-fill">
+                  <h4 class="fs-6 fw-semibold">Special Offer</h4>
                   <p>
                     Get 20% off on cleaning services this week. Use code:
                     CLEAN20
@@ -1412,12 +1453,16 @@
                 </div>
               </div>
 
-              <div class="notification-item">
-                <div class="notification-icon">
+              <div
+                class="notification-item bg-white p-20 d-flex align-items-center"
+              >
+                <div
+                  class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
+                >
                   <i class="fas fa-clock"></i>
                 </div>
-                <div class="notification-content">
-                  <h4>Booking Reminder</h4>
+                <div class="notification-content flex-fill">
+                  <h4 class="fs-6 fw-semibold">Booking Reminder</h4>
                   <p>
                     Reminder: You have a plumbing repair booking tomorrow at
                     4:00 PM
@@ -1426,12 +1471,16 @@
                 </div>
               </div>
 
-              <div class="notification-item">
-                <div class="notification-icon">
+              <div
+                class="notification-item bg-white p-20 d-flex align-items-center"
+              >
+                <div
+                  class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
+                >
                   <i class="fas fa-user-plus"></i>
                 </div>
-                <div class="notification-content">
-                  <h4>New Service Provider</h4>
+                <div class="notification-content flex-fill">
+                  <h4 class="fs-6 fw-semibold">New Service Provider</h4>
                   <p>
                     A new service provider specializing in painting works has
                     joined in your area. Browse their services now!
@@ -1444,17 +1493,19 @@
 
           <!-- Main Support Content -->
           <div class="tab-pane fade support-page" id="support" role="tabpanel">
-            <div class="support-header">
-              <h2>Support</h2>
+            <div class="support-header text-center">
+              <h2 class="mb-10">Support</h2>
               <p>
                 We are here to help you anytime. Choose your preferred contact
                 method
               </p>
             </div>
 
-            <div class="support-options">
-              <div class="support-card">
-                <div class="support-icon">
+            <div class="support-options d-grid gap-20">
+              <div class="support-card bg-white text-center">
+                <div
+                  class="support-icon rounded-circle d-flex justify-content-center align-items-center text-white mt-0 mx-auto mb-20"
+                >
                   <i class="fas fa-comments"></i>
                 </div>
                 <h3>Live Chat</h3>
@@ -1462,8 +1513,10 @@
                 <button class="btn btn-primary">Start Chat</button>
               </div>
 
-              <div class="support-card">
-                <div class="support-icon">
+              <div class="support-card bg-white text-center">
+                <div
+                  class="support-icon rounded-circle d-flex justify-content-center align-items-center text-white mt-0 mx-auto mb-20"
+                >
                   <i class="fas fa-phone"></i>
                 </div>
                 <h3>Phone Call</h3>
@@ -1471,8 +1524,10 @@
                 <button class="btn btn-secondary">Call Now</button>
               </div>
 
-              <div class="support-card">
-                <div class="support-icon">
+              <div class="support-card bg-white text-center">
+                <div
+                  class="support-icon rounded-circle d-flex justify-content-center align-items-center text-white mt-0 mx-auto mb-20"
+                >
                   <i class="fas fa-envelope"></i>
                 </div>
                 <h3>Email</h3>
@@ -1481,18 +1536,23 @@
               </div>
             </div>
 
-            <div class="faq-section">
+            <div class="faq-section bg-white">
               <h3>Frequently Asked Questions</h3>
-              <div class="faq-list accordion" id="faqAccordion">
+              <div
+                class="faq-list accordion d-flex flex-column mt-10"
+                id="faqAccordion"
+              >
                 <div class="faq-item overflow-hidden">
                   <div
-                    class="faq-question"
+                    class="faq-question d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq1"
                     aria-expanded="false"
                     aria-controls="faq1"
                   >
-                    <h4>How can I book a service?</h4>
+                    <h4 class="fs-6 fw-semibold text-dark">
+                      How can I book a service?
+                    </h4>
                     <i class="fas fa-chevron-down"></i>
                   </div>
                   <div
@@ -1510,13 +1570,15 @@
 
                 <div class="faq-item overflow-hidden">
                   <div
-                    class="faq-question"
+                    class="faq-question d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq2"
                     aria-expanded="false"
                     aria-controls="faq2"
                   >
-                    <h4>How can I cancel a booking?</h4>
+                    <h4 class="fs-6 fw-semibold text-dark">
+                      How can I cancel a booking?
+                    </h4>
                     <i class="fas fa-chevron-down"></i>
                   </div>
                   <div
@@ -1533,13 +1595,15 @@
 
                 <div class="faq-item overflow-hidden">
                   <div
-                    class="faq-question"
+                    class="faq-question d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq3"
                     aria-expanded="false"
                     aria-controls="faq3"
                   >
-                    <h4>What payment methods are available?</h4>
+                    <h4 class="fs-6 fw-semibold text-dark">
+                      What payment methods are available?
+                    </h4>
                     <i class="fas fa-chevron-down"></i>
                   </div>
                   <div
@@ -1553,13 +1617,15 @@
 
                 <div class="faq-item overflow-hidden">
                   <div
-                    class="faq-question"
+                    class="faq-question d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq4"
                     aria-expanded="false"
                     aria-controls="faq4"
                   >
-                    <h4>What if I am not satisfied with the service?</h4>
+                    <h4 class="fs-6 fw-semibold text-dark">
+                      What if I am not satisfied with the service?
+                    </h4>
                     <i class="fas fa-chevron-down"></i>
                   </div>
                   <div
@@ -1945,8 +2011,8 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
+          <div class="modal-content mx-auto py-3 px-2">
+            <div class="modal-header mb-2">
               <h2 class="modal-title fs-5">Booking Details</h2>
               <button
                 type="button"
@@ -2022,7 +2088,7 @@
             </div>
             <div class="modal-body">
               <form>
-                <div class="input-group">
+                <div class="input-group mb-10">
                   <label for="fullName" class="form-label">Full Name</label>
                   <input
                     type="text"
@@ -2032,7 +2098,7 @@
                     required
                   />
                 </div>
-                <div class="input-group">
+                <div class="input-group mb-10">
                   <label for="city" class="form-label">Your City</label>
                   <input
                     type="text"
@@ -2041,7 +2107,7 @@
                     placeholder="Enter your city"
                   />
                 </div>
-                <div class="input-group">
+                <div class="input-group mb-10">
                   <label for="address" class="form-label">Your Address</label>
                   <input
                     type="text"
@@ -2050,7 +2116,7 @@
                     placeholder="Enter your address"
                   />
                 </div>
-                <div class="input-group">
+                <div class="input-group mb-10">
                   <label for="avatar" class="form-label">Your Image</label>
                   <input
                     type="file"
@@ -2060,7 +2126,7 @@
                     placeholder="Enter the url of your image"
                   />
                 </div>
-                <div class="input-group">
+                <div class="input-group mb-10">
                   <label for="dob" class="form-label">Date of Birth</label>
                   <input
                     type="date"
@@ -2246,21 +2312,21 @@
       >
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
-            <button
-              type="button"
-              class="btn-close ms-auto"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
             <div class="modal-header">
               <h2 class="modal-title fs-6 fw-bold text-center">
                 Welcome, If you have any issue sent to us, and we'll contact
                 with you ✌️
               </h2>
+              <button
+                type="button"
+                class="btn-close ms-auto"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body">
               <form>
-                <div class="input-group">
+                <div class="input-group p-10">
                   <label for="fullName" class="form-label">Full Name</label>
                   <input
                     type="text"
@@ -2269,7 +2335,7 @@
                     required
                   />
                 </div>
-                <div class="input-group">
+                <div class="input-group p-10">
                   <label for="email" class="form-label">Email Address</label>
                   <input
                     type="email"
@@ -2280,7 +2346,7 @@
                   />
                 </div>
 
-                <div class="input-group">
+                <div class="input-group p-10">
                   <label for="notes" class="form-label"
                     >Tell us Anything you want</label
                   >

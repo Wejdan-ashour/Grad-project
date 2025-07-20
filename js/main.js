@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const lastPage = localStorage.getItem("lastVisitedPage") || "home";
   const targetTab = document.querySelector(`.nav-link[href="#${lastPage}"]`);
   const tabPane = document.getElementById(lastPage);
-
   if (targetTab && tabPane) {
     // Remove current active tabs
     document
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".tab-pane.show.active").forEach((el) => {
       el.classList.remove("show", "active");
     });
-
     // Activate the saved tab and content
     targetTab.classList.add("active");
     tabPane.classList.add("show", "active");
@@ -69,6 +67,36 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" }, 100);
       });
     });
+    // Dark mode
+      const toggleButton = document.getElementById("dark-mode-toggle");
+  const body = document.body;
+
+  if (toggleButton) {
+    const icon = toggleButton.querySelector("i"); 
+
+    function updateIcon(isDarkMode) {
+      if (isDarkMode) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+    }
+    toggleButton.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const isDarkMode = body.classList.contains("dark-mode");
+      localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+      updateIcon(isDarkMode); 
+    });
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      body.classList.add("dark-mode");
+      updateIcon(true); 
+    } else {
+      updateIcon(false); 
+    }
+  }
 });
 
 // Close sidebar when clicking outside

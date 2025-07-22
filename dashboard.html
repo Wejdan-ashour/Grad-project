@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
@@ -140,7 +141,7 @@
       <main class="main-content flex-grow-1" id="mainContent">
         <!-- Top Header -->
         <header
-          class="top-header bg-white d-flex align-items-center justify-content-between position-sticky top-0"
+          class="top-header d-flex align-items-center justify-content-between position-sticky top-0"
         >
           <div class="header-left d-flex align-items-center gap-3">
             <button class="menu-toggle" id="menuToggle">
@@ -162,6 +163,10 @@
               <input type="text" placeholder="Search for a service..." />
               <i class="fas fa-search position-absolute"></i>
             </div>
+            <!-- Dark Mode Toggle Button -->
+            <button id="dark-mode-toggle" class="btn btn-primary p-2">
+              <i class="fas fa-sun"></i> 
+            </button>
             <!-- Notification Bell Dropdown -->
             <div class="dropdown position-relative z-3">
               <button
@@ -201,6 +206,7 @@
                   </a>
                 </li>
 
+
                 <li>
                   <hr class="dropdown-divider mt-3 mb-3" />
                 </li>
@@ -238,7 +244,7 @@
             <div class="quick-actions">
               <h2 class="fw-semibold mb-20 pb-10">Quick Actions</h2>
               <div class="actions-grid d-grid gap-20">
-                <div class="action-card bg-white text-center">
+                <div class="action-card  text-center">
                   <div
                     class="action-icon mt-0 mx-auto mb-3 d-flex align-items-center justify-content-center text-white"
                   >
@@ -255,7 +261,7 @@
                   </button>
                 </div>
 
-                <div class="action-card bg-white text-center">
+                <div class="action-card  text-center">
                   <div
                     class="action-icon mt-0 mx-auto mb-3 d-flex align-items-center justify-content-center text-white"
                   >
@@ -268,7 +274,7 @@
                   </button>
                 </div>
 
-                <div class="action-card bg-white text-center">
+                <div class="action-card  text-center">
                   <div
                     class="action-icon mt-0 mx-auto mb-3 d-flex align-items-center justify-content-center text-white"
                   >
@@ -279,7 +285,7 @@
                   <button class="btn btn-secondary" id="rateBtn">Rate</button>
                 </div>
 
-                <div class="action-card bg-white text-center">
+                <div class="action-card text-center">
                   <div
                     class="action-icon mt-0 mx-auto mb-3 d-flex align-items-center justify-content-center text-white"
                   >
@@ -303,7 +309,7 @@
               <h2 class="fw-semibold mb-20 pb-10">Recent Bookings</h2>
               <div class="bookings-list d-flex flex-column gap-3">
                 <div
-                  class="booking-item p-20 d-flex justify-content-between align-items-center bg-white"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center "
                 >
                   <div class="d-flex align-items-center gap-3 booking-info">
                     <div
@@ -335,7 +341,7 @@
                 </div>
 
                 <div
-                  class="booking-item p-20 d-flex justify-content-between align-items-center rounded bg-white"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center rounded"
                 >
                   <div class="d-flex align-items-center gap-3 booking-info">
                     <div
@@ -367,7 +373,7 @@
                 </div>
 
                 <div
-                  class="booking-item p-20 d-flex justify-content-between align-items-center rounded bg-white"
+                  class="booking-item p-20 d-flex justify-content-between align-items-center rounded"
                 >
                   <div class="d-flex align-items-center gap-3 booking-info">
                     <div
@@ -395,10 +401,10 @@
             </div>
 
             <!-- Popular Services -->
-            <div class="popular-services bg-white">
+            <div class="popular-services">
               <h2 class="fw-semibold mb-20 pb-10">Popular Services</h2>
               <div class="services-grid d-grid gap-20">
-                <div class="service-card p-20 bg-white text-center">
+                <div class="service-card p-20  text-center">
                   <div
                     class="service-image d-flex align-items-center justify-content-center text-white rounded-circle"
                   >
@@ -428,7 +434,7 @@
                   </button>
                 </div>
 
-                <div class="service-card p-20 bg-white text-center">
+                <div class="service-card p-20  text-center">
                   <div
                     class="service-image d-flex align-items-center justify-content-center text-white rounded-circle"
                   >
@@ -460,7 +466,7 @@
                   </button>
                 </div>
 
-                <div class="service-card p-20 bg-white text-center">
+                <div class="service-card p-20  text-center">
                   <div
                     class="service-image d-flex align-items-center justify-content-center text-white rounded-circle"
                   >
@@ -524,7 +530,7 @@
             </div>
             <div class="services-grid d-grid gap-20">
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20  text-center position-relative"
                 data-category="Electrical"
               >
                 <button class="btn p-0 fav-btn">
@@ -572,7 +578,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20 text-center position-relative"
                 data-category="Plumbing"
               >
                 <button class="btn p-0 fav-btn">
@@ -619,7 +625,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20  text-center position-relative"
                 data-category="Appliance Repair"
               >
                 <button class="btn p-0 fav-btn">
@@ -668,7 +674,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20  text-center position-relative"
                 data-category="Cleaning"
               >
                 <button class="btn p-0 fav-btn">
@@ -715,7 +721,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20  text-center position-relative"
                 data-category="Plumbing"
               >
                 <button class="btn p-0 fav-btn">
@@ -764,7 +770,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20  text-center position-relative"
                 data-category="Appliance Repair"
               >
                 <button class="btn p-0 fav-btn">
@@ -811,7 +817,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20  text-center position-relative"
                 data-category="Cleaning"
               >
                 <button class="btn p-0 fav-btn">
@@ -859,7 +865,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20  text-center position-relative"
                 data-category="Handyman"
               >
                 <button class="btn p-0 fav-btn">
@@ -906,7 +912,7 @@
               </div>
 
               <div
-                class="service-card p-20 bg-white text-center position-relative"
+                class="service-card p-20 text-center position-relative"
                 data-category="plumbing"
               >
                 <button class="btn p-0 fav-btn">
@@ -1017,7 +1023,7 @@
               </ul>
             </div>
 
-            <div class="bookings-table bg-white overflow-hidden">
+            <div class="bookings-table  overflow-hidden">
               <div
                 class="booking-row header d-grid align-items-center fw-semibold"
               >
@@ -1173,7 +1179,7 @@
             </div>
             <div class="favorites-grid d-grid gap-20">
               <div
-                class="favorite-provider bg-white p-20 d-flex align-items-center gap-20"
+                class="favorite-provider  p-20 d-flex align-items-center gap-20"
               >
                 <img
                   src="public/assest/ahmed.jpeg"
@@ -1211,7 +1217,7 @@
               </div>
 
               <div
-                class="favorite-provider bg-white p-20 d-flex align-items-center gap-20"
+                class="favorite-provider p-20 d-flex align-items-center gap-20"
               >
                 <img
                   src="public/assest/anime-boy-chill-digital-art-hd-wallpaper-uhdpaper.com-284@0@j.jpg"
@@ -1249,7 +1255,7 @@
               </div>
 
               <div
-                class="favorite-provider bg-white p-20 d-flex align-items-center gap-20"
+                class="favorite-provider p-20 d-flex align-items-center gap-20"
               >
                 <img
                   src="public/assest/DavidChen.jpg"
@@ -1291,7 +1297,7 @@
           <!-- Main Profile Content -->
           <div class="tab-pane fade profile-page" id="profile" role="tabpanel">
             <div
-              class="profile-header bg-white d-flex align-items-center gap-20"
+              class="profile-header  d-flex align-items-center gap-20"
             >
               <img
                 src="/public/assest/amiii.png"
@@ -1317,7 +1323,7 @@
             </div>
 
             <div class="profile-sections d-grid gap-20">
-              <div class="profile-section bg-white mb-20">
+              <div class="profile-section  mb-20">
                 <h3>Personal Information</h3>
                 <div class="info-grid d-grid gap-20 mt-20">
                   <div class="info-item d-flex flex-column">
@@ -1347,7 +1353,7 @@
                 </div>
               </div>
 
-              <div class="profile-section bg-white mb-20">
+              <div class="profile-section  mb-20">
                 <h3>Account Statistics</h3>
                 <div class="account-stats d-grid gap-20 mt-20">
                   <div class="stat-item text-center p-20">
@@ -1388,7 +1394,7 @@
 
             <div class="notifications-list d-flex flex-column">
               <div
-                class="notification-item bg-white p-20 d-flex align-items-center unread"
+                class="notification-item p-20 d-flex align-items-center unread"
               >
                 <div
                   class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
@@ -1412,7 +1418,7 @@
               </div>
 
               <div
-                class="notification-item bg-white p-20 d-flex align-items-center unread"
+                class="notification-item p-20 d-flex align-items-center unread"
               >
                 <div
                   class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
@@ -1436,7 +1442,7 @@
               </div>
 
               <div
-                class="notification-item bg-white p-20 d-flex align-items-center"
+                class="notification-item  p-20 d-flex align-items-center"
               >
                 <div
                   class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
@@ -1454,7 +1460,7 @@
               </div>
 
               <div
-                class="notification-item bg-white p-20 d-flex align-items-center"
+                class="notification-item p-20 d-flex align-items-center"
               >
                 <div
                   class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
@@ -1472,7 +1478,7 @@
               </div>
 
               <div
-                class="notification-item bg-white p-20 d-flex align-items-center"
+                class="notification-item  p-20 d-flex align-items-center"
               >
                 <div
                   class="notification-icon rounded-circle d-flex justify-content-center align-items-center text-white"
@@ -1502,7 +1508,7 @@
             </div>
 
             <div class="support-options d-grid gap-20">
-              <div class="support-card bg-white text-center">
+              <div class="support-card  text-center">
                 <div
                   class="support-icon rounded-circle d-flex justify-content-center align-items-center text-white mt-0 mx-auto mb-20"
                 >
@@ -1513,7 +1519,7 @@
                 <button class="btn btn-primary">Start Chat</button>
               </div>
 
-              <div class="support-card bg-white text-center">
+              <div class="support-card  text-center">
                 <div
                   class="support-icon rounded-circle d-flex justify-content-center align-items-center text-white mt-0 mx-auto mb-20"
                 >
@@ -1524,7 +1530,7 @@
                 <button class="btn btn-secondary">Call Now</button>
               </div>
 
-              <div class="support-card bg-white text-center">
+              <div class="support-card text-center">
                 <div
                   class="support-icon rounded-circle d-flex justify-content-center align-items-center text-white mt-0 mx-auto mb-20"
                 >
@@ -1536,7 +1542,7 @@
               </div>
             </div>
 
-            <div class="faq-section bg-white">
+            <div class="faq-section">
               <h3>Frequently Asked Questions</h3>
               <div
                 class="faq-list accordion d-flex flex-column mt-10"
@@ -1650,7 +1656,7 @@
             id="settings"
             role="tabpanel"
           >
-            <div class="settings-section bg-white mb-20">
+            <div class="settings-section mb-20">
               <h3>Account Settings</h3>
               <div
                 class="setting-item d-flex justify-content-between align-items-center"
@@ -1696,7 +1702,7 @@
               </div>
             </div>
 
-            <div class="settings-section bg-white">
+            <div class="settings-section">
               <h3>Notification Settings</h3>
               <div
                 class="setting-item d-flex justify-content-between align-items-center"
@@ -2375,6 +2381,6 @@
       const notyf = new Notyf();
     </script>
     <script type="module" src="js/dashboard.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

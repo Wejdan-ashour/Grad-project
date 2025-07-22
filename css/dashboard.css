@@ -9,6 +9,664 @@
   --title-size: 1.5rem;
 }
 
+/* Dark Mode Variables and Styles for Dashboard */
+body.dark-mode {
+  --main-bg-color: #4a5568; 
+  --body-bg-color: #1a202c; 
+  --white-color: #2d3748; 
+  --gray-color: #a0aec0; 
+  --dark-color: #e2e8f0; 
+  --icon-color: #63b3ed; 
+
+  /* Dashboard Specific Dark Mode Variables */
+  --dashboard-sidebar-bg-start: #1a202c;
+  --dashboard-sidebar-bg-end: #2d3748;
+  --dashboard-sidebar-link-color: #a0aec0;
+  --dashboard-sidebar-link-hover-bg: rgba(255, 255, 255, 0.08);
+  --dashboard-sidebar-link-hover-color: #e2e8f0;
+  --dashboard-sidebar-link-active-bg: rgba(255, 255, 255, 0.15);
+  --dashboard-sidebar-link-active-color: #e2e8f0;
+
+  --dashboard-top-header-bg: #2d3748;
+  --dashboard-top-header-shadow: rgba(0, 0, 0, 0.4);
+
+  --dashboard-search-input-bg: #4a5568;
+  --dashboard-search-input-border: #4a5568;
+  --dashboard-search-input-focus-border: #63b3ed;
+  --dashboard-search-input-text: #e2e8f0;
+  --dashboard-search-placeholder-color: #a0aec0;
+  --dashboard-search-icon-color: #a0aec0;
+
+  --dashboard-notification-btn-color: #a0aec0;
+  --dashboard-notification-btn-hover-bg: #374151;
+  --dashboard-user-profile-hover-bg: #374151;
+  --dashboard-user-name-color: #e2e8f0;
+
+  --dashboard-card-bg: #2d3748;
+  --dashboard-card-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-stat-info-h3-color: #a0aec0;
+  --dashboard-stat-number-color: #e2e8f0;
+
+  --dashboard-quick-actions-h2-color: #e2e8f0;
+  --dashboard-quick-actions-border-bottom: #4a5568;
+  --dashboard-action-card-bg: #2d3748;
+  --dashboard-action-card-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-action-card-h3-color: #e2e8f0;
+  --dashboard-action-card-p-color: #a0aec0;
+
+  --dashboard-upcoming-reviews-bg: #2d3748;
+  --dashboard-upcoming-reviews-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-upcoming-reviews-h2-color: #e2e8f0;
+  --dashboard-upcoming-reviews-border-bottom: #4a5568;
+  --dashboard-booking-item-border: #4a5568;
+  --dashboard-booking-item-hover-border: #63b3ed;
+  --dashboard-booking-item-hover-shadow: rgba(99, 179, 237, 0.1);
+  --dashboard-booking-info-h4-color: #e2e8f0;
+  --dashboard-booking-info-p-color: #a0aec0;
+
+  --dashboard-review-item-border: #4a5568;
+  --dashboard-customer-name-color: #e2e8f0;
+  --dashboard-review-text-color: #a0aec0;
+
+  --dashboard-service-card-border: #4a5568;
+  --dashboard-service-card-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-service-card-h3-color: #e2e8f0;
+  --dashboard-service-card-p-color: #a0aec0;
+
+  --dashboard-btn-secondary-bg: #4a5568;
+  --dashboard-btn-secondary-color: #e2e8f0;
+  --dashboard-btn-secondary-border: #4a5568;
+  --dashboard-btn-secondary-hover-bg: #5a6578;
+
+  --dashboard-table-bg: #2d3748;
+  --dashboard-table-header-bg: #374151;
+  --dashboard-table-row-border: #4a5568;
+  --dashboard-table-row-hover-bg: #374151;
+  --dashboard-table-text-color: #e2e8f0;
+
+  --dashboard-profile-header-bg: #2d3748;
+  --dashboard-profile-header-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-profile-info-h2-color: #e2e8f0;
+  --dashboard-profile-info-p-color: #a0aec0;
+  --dashboard-profile-stats-color: #a0aec0;
+
+  --dashboard-profile-section-bg: #2d3748;
+  --dashboard-profile-section-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-profile-section-h3-color: #e2e8f0;
+  --dashboard-info-item-label-color: #a0aec0;
+  --dashboard-info-item-span-color: #e2e8f0;
+
+  --dashboard-specialty-tag-bg: linear-gradient(135deg, #4299e1, #3182ce);
+  --dashboard-specialty-tag-color: #ffffff;
+
+  --dashboard-earning-card-bg: #2d3748;
+  --dashboard-earning-card-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-earning-card-h3-color: #e2e8f0;
+  --dashboard-earning-amount-color: #63b3ed;
+
+  --dashboard-reviews-summary-bg: #2d3748;
+  --dashboard-reviews-summary-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-reviews-summary-h3-color: #e2e8f0;
+  --dashboard-rating-number-color: #63b3ed;
+  --dashboard-total-reviews-color: #a0aec0;
+
+  --dashboard-review-item-bg: #2d3748;
+  --dashboard-review-item-border: #4a5568;
+  --dashboard-reviewer-name-color: #e2e8f0;
+  --dashboard-review-date-color: #a0aec0;
+  --dashboard-review-text-color: #a0aec0;
+
+  --dashboard-settings-section-bg: #2d3748;
+  --dashboard-settings-section-shadow: rgba(0, 0, 0, 0.3);
+  --dashboard-settings-section-h3-color: #e2e8f0;
+  --dashboard-setting-item-border-bottom: #4a5568;
+  --dashboard-setting-item-label-color: #e2e8f0;
+  --dashboard-setting-item-btn-secondary-bg: #4a5568;
+  --dashboard-setting-item-btn-secondary-color: #e2e8f0;
+  --dashboard-setting-item-btn-secondary-hover-bg: #5a6578;
+  --dashboard-setting-item-checkbox-bg: #4a5568;
+  --dashboard-setting-item-checkbox-border: #63b3ed;
+
+  --dashboard-modal-content-bg: #2d3748;
+  --dashboard-modal-content-shadow: rgba(0, 0, 0, 0.4);
+  --dashboard-modal-header-h2-color: #e2e8f0;
+  --dashboard-modal-label-color: #e2e8f0;
+  --dashboard-modal-input-bg: #4a5568;
+  --dashboard-modal-input-border: #4a5568;
+  --dashboard-modal-input-text: #e2e8f0;
+  --dashboard-modal-input-focus-border: #63b3ed;
+  --dashboard-modal-textarea-bg: #4a5568;
+  --dashboard-modal-textarea-border: #4a5568;
+  --dashboard-modal-textarea-text: #e2e8f0;
+  --dashboard-modal-textarea-focus-border: #63b3ed;
+  --dashboard-modal-form-check-label-color: #e2e8f0;
+  --dashboard-modal-btn-primary-bg: #4299e1;
+  --dashboard-modal-btn-primary-hover-bg: #3182ce;
+  --dashboard-modal-btn-secondary-bg: #4a5568;
+  --dashboard-modal-btn-secondary-hover-bg: #5a6578;
+  --dashboard-modal-btn-text: #ffffff;
+
+  --dashboard-booking-details-modal-bg: #2d3748;
+  --dashboard-booking-details-modal-h2-color: #e2e8f0;
+  --dashboard-booking-details-modal-p-color: #e2e8f0;
+  --dashboard-booking-details-modal-strong-color: #e2e8f0;
+  --dashboard-booking-details-modal-hr-border: #4a5568;
+  --dashboard-booking-details-modal-waiting-bg: #374151;
+  --dashboard-booking-details-modal-waiting-icon-color: #63b3ed;
+  --dashboard-booking-details-modal-waiting-h6-color: #e2e8f0;
+  --dashboard-booking-details-modal-waiting-p-color: #a0aec0;
+
+  --dashboard-review-card-bg: #374151;
+  --dashboard-review-card-h6-color: #e2e8f0;
+  --dashboard-review-card-stars-color: #ffd700;
+  --dashboard-review-card-muted-color: #a0aec0;
+  --dashboard-review-card-p-color: #a0aec0;
+
+  --dashboard-filter-tabs-btn-bg: #4a5568;
+  --dashboard-filter-tabs-btn-color: #e2e8f0;
+  --dashboard-filter-tabs-btn-border: #4a5568;
+  --dashboard-filter-tabs-btn-active-bg: linear-gradient(135deg, #4299e1, #3182ce);
+  --dashboard-filter-tabs-btn-active-color: #ffffff;
+  --dashboard-filter-tabs-btn-hover-bg: #5a6578;
+
+  --dashboard-table-tx-dark-color: #e2e8f0;
+  --dashboard-table-status-pending-bg: #ffe082;
+  --dashboard-table-status-pending-color: #6d4c41;
+  --dashboard-table-status-confirmed-bg: #a5d6a7;
+  --dashboard-table-status-confirmed-color: #2e7d32;
+  --dashboard-table-status-completed-bg: #81d4fa;
+  --dashboard-table-status-completed-color: #01579b;
+  --dashboard-table-status-cancelled-bg: #ef9a9a;
+  --dashboard-table-status-cancelled-color: #b71c1c;
+}
+
+body.dark-mode {
+  background-color: var(--body-bg-color);
+  color: var(--dark-color);
+}
+
+body.dark-mode .sidebar {
+  background: linear-gradient(135deg, var(--dashboard-sidebar-bg-start) 0%, var(--dashboard-sidebar-bg-end) 100%);
+}
+
+body.dark-mode .logo i {
+  color: var(--icon-color);
+}
+body.dark-mode header.top-header {
+  background: linear-gradient(0deg, var(--dashboard-sidebar-bg-start) 0%, var(--dashboard-sidebar-bg-end) 100%);
+}
+body.dark-mode aside .nav-link {
+  color: var(--dashboard-sidebar-link-color);
+}
+
+body.dark-mode aside .nav-link:hover {
+  background-color: var(--dashboard-sidebar-link-hover-bg);
+  color: var(--dashboard-sidebar-link-hover-color);
+  border-left-color: var(--icon-color);
+}
+
+body.dark-mode aside .nav-link.active {
+  background-color: var(--dashboard-sidebar-link-active-bg);
+  color: var(--dashboard-sidebar-link-active-color);
+  border-left-color: var(--icon-color);
+}
+/* here */
+body.dark-mode .search-box input {
+  background-color: var(--dashboard-search-input-bg);
+  border: 1px solid var(--dashboard-search-input-border);
+  color: var(--dashboard-search-input-text);
+}
+body.dark-mode .search-box input:focus {
+  border-color: var(--dashboard-search-input-focus-border);
+}
+body.dark-mode .search-box input::placeholder {
+  color: var(--dashboard-search-placeholder-color);
+}
+body.dark-mode .search-box i {
+  color: var(--dashboard-search-icon-color);
+}
+
+body.dark-mode .notification-btn {
+  color: var(--dashboard-notification-btn-color);
+}
+
+body.dark-mode .notification-btn:hover,
+body.dark-mode .user-profile:hover {
+  background-color: var(--dashboard-notification-btn-hover-bg);
+}
+
+body.dark-mode .user-name {
+  color: var(--dashboard-user-name-color);
+}
+
+body.dark-mode .stat-card {
+  background-color: var(--dashboard-card-bg);
+  box-shadow: 0 4px 15px var(--dashboard-card-shadow);
+}
+
+body.dark-mode .stat-card:hover {
+  box-shadow: 0 8px 25px var(--dashboard-card-shadow);
+}
+
+body.dark-mode .stat-info h3 {
+  color: var(--dashboard-stat-info-h3-color);
+}
+
+body.dark-mode .stat-number {
+  color: var(--dashboard-stat-number-color);
+}
+body.dark-mode .faq-question {
+  background: var(--dashboard-btn-secondary-bg) !important;
+}
+body.dark-mode .faq-item {
+  border: 0px solid #e0e0e0;
+}
+body.dark-mode .quick-actions h2,
+body.dark-mode .recent-bookings h2,
+body.dark-mode .popular-services h2 {
+  color: var(--dashboard-quick-actions-h2-color);
+  border-bottom-color: var(--dashboard-quick-actions-border-bottom);
+}
+
+body.dark-mode .action-card {
+  /* background-color: var(--dashboard-action-card-bg); */
+  background-color: #1a202c important!; 
+  box-shadow: 0 4px 15px var(--dashboard-action-card-shadow);
+}
+
+body.dark-mode .action-card:hover {
+  box-shadow: 0 8px 25px var(--dashboard-action-card-shadow);
+}
+
+body.dark-mode .action-card h3 {
+  color: var(--dashboard-action-card-h3-color);
+}
+
+body.dark-mode .action-card p {
+  color: var(--dashboard-action-card-p-color);
+}
+
+body.dark-mode .upcoming-bookings,
+body.dark-mode .recent-reviews {
+  background-color: var(--dashboard-upcoming-reviews-bg);
+  box-shadow: 0 4px 15px var(--dashboard-upcoming-reviews-shadow);
+}
+
+body.dark-mode .upcoming-bookings h2,
+body.dark-mode .recent-reviews h2 {
+  color: var(--dashboard-upcoming-reviews-h2-color);
+  border-bottom-color: var(--dashboard-upcoming-reviews-border-bottom);
+}
+
+body.dark-mode .booking-item {
+  border: 1px solid var(--dashboard-booking-item-border);
+}
+
+body.dark-mode .booking-item:hover {
+  border-color: var(--dashboard-booking-item-hover-border);
+  box-shadow: 0 2px 8px var(--dashboard-booking-item-hover-shadow);
+}
+
+body.dark-mode .booking-info h4 {
+  color: var(--dashboard-booking-info-h4-color);
+}
+
+body.dark-mode .booking-info p {
+  color: var(--dashboard-booking-info-p-color);
+}
+
+body.dark-mode .review-item {
+  border: 1px solid var(--dashboard-review-item-border);
+}
+
+body.dark-mode .customer-name {
+  color: var(--dashboard-customer-name-color);
+}
+
+body.dark-mode .review-text {
+  color: var(--dashboard-review-text-color);
+}
+
+body.dark-mode .popular-services {
+  box-shadow: 0 4px 15px var(--dashboard-upcoming-reviews-shadow);
+}
+
+body.dark-mode .service-card {
+  border: 1px solid var(--dashboard-service-card-border);
+  box-shadow: 0 4px 15px var(--dashboard-service-card-shadow);
+}
+
+body.dark-mode .service-card:hover {
+  box-shadow: 0 8px 25px var(--dashboard-service-card-shadow);
+}
+
+body.dark-mode .service-card h3 {
+  color: var(--dashboard-service-card-h3-color);
+}
+
+body.dark-mode .service-card p {
+  color: var(--dashboard-service-card-p-color);
+}
+
+body.dark-mode .btn-secondary {
+  background: var(--dashboard-btn-secondary-bg) !important;
+  color: var(--dashboard-btn-secondary-color) !important;
+  border: 1px solid var(--dashboard-btn-secondary-border) !important;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: var(--dashboard-btn-secondary-hover-bg) !important;
+}
+
+body.dark-mode .bookings-table ,
+body.dark-mode .booking-row,
+body.dark-mode .earning-row{
+  background-color: var(--dashboard-table-bg);
+  box-shadow: 0 4px 15px var(--dashboard-card-shadow);
+}
+
+body.dark-mode .booking-row.header,
+body.dark-mode .earning-row.header {
+  background: var(--dashboard-table-header-bg);
+  color: var(--dashboard-table-text-color);
+}
+
+body.dark-mode .booking-row,
+body.dark-mode .earning-row {
+  border-bottom: 1px solid var(--dashboard-table-row-border);
+  color: var(--dashboard-table-text-color);
+}
+
+body.dark-mode .booking-row:not(.header):hover,
+body.dark-mode .earning-row:not(.header):hover {
+  background-color: var(--dashboard-table-row-hover-bg);
+}
+
+body.dark-mode .tx-dark {
+  color: var(--dashboard-table-tx-dark-color);
+}
+
+body.dark-mode .tab-btn {
+  background-color: var(--dashboard-filter-tabs-btn-bg);
+  color: var(--dashboard-filter-tabs-btn-color);
+  border: 1px solid var(--dashboard-filter-tabs-btn-border);
+}
+
+body.dark-mode .nav-item.active .tab-btn,
+body.dark-mode .nav-item:hover .tab-btn {
+  background: var(--dashboard-filter-tabs-btn-active-bg) !important;
+  color: var(--dashboard-filter-tabs-btn-active-color) !important;
+  border-color: transparent !important;
+}
+
+body.dark-mode .status.pending {
+  background: var(--dashboard-table-status-pending-bg);
+  color: var(--dashboard-table-status-pending-color);
+}
+
+body.dark-mode .status.confirmed {
+  background: var(--dashboard-table-status-confirmed-bg);
+  color: var(--dashboard-table-status-confirmed-color);
+}
+
+body.dark-mode .status.completed {
+  background: var(--dashboard-table-status-completed-bg);
+  color: var(--dashboard-table-status-completed-color);
+}
+body.dark-mode .status.cancelled {
+  background: var(--dashboard-table-status-cancelled-bg);
+  color: var(--dashboard-table-status-cancelled-color);
+}
+
+body.dark-mode .profile-header {
+  background-color: var(--dashboard-profile-header-bg);
+  box-shadow: 0 4px 15px var(--dashboard-profile-header-shadow);
+}
+
+body.dark-mode .profile-info h2 {
+  color: var(--dashboard-profile-info-h2-color);
+}
+
+body.dark-mode .profile-info p {
+  color: var(--dashboard-profile-info-p-color);
+}
+
+body.dark-mode .profile-stats {
+  color: var(--dashboard-profile-stats-color);
+}
+
+body.dark-mode .profile-section {
+  background-color: var(--dashboard-profile-section-bg);
+  box-shadow: 0 4px 15px var(--dashboard-profile-section-shadow);
+}
+
+body.dark-mode .profile-section h3 {
+  color: var(--dashboard-profile-section-h3-color);
+}
+
+body.dark-mode .info-item label {
+  color: var(--dashboard-info-item-label-color);
+}
+
+body.dark-mode .info-item span {
+  color: var(--dashboard-info-item-span-color);
+}
+
+body.dark-mode .specialty-tag {
+  background: var(--dashboard-specialty-tag-bg);
+  color: var(--dashboard-specialty-tag-color);
+}
+
+body.dark-mode .earning-card {
+  background-color: var(--dashboard-earning-card-bg);
+  box-shadow: 0 4px 15px var(--dashboard-earning-card-shadow);
+}
+
+body.dark-mode .earning-card h3 {
+  color: var(--dashboard-earning-card-h3-color);
+}
+
+body.dark-mode .earning-amount {
+  color: var(--dashboard-earning-amount-color);
+}
+
+body.dark-mode .earnings-history {
+  background-color: var(--dashboard-earning-card-bg);
+  box-shadow: 0 4px 15px var(--dashboard-earning-card-shadow);
+}
+
+body.dark-mode .reviews-summary {
+  background-color: var(--dashboard-reviews-summary-bg);
+  box-shadow: 0 4px 15px var(--dashboard-reviews-summary-shadow);
+}
+
+body.dark-mode .reviews-summary h3 {
+  color: var(--dashboard-reviews-summary-h3-color);
+}
+
+body.dark-mode .rating-number {
+  color: var(--dashboard-rating-number-color);
+}
+
+body.dark-mode .reviews-summary p {
+  color: var(--dashboard-total-reviews-color);
+}
+
+body.dark-mode .review-item {
+  border: 1px solid var(--dashboard-review-item-border);
+}
+
+body.dark-mode .reviewer-info h4 {
+  color: var(--dashboard-reviewer-name-color);
+}
+
+body.dark-mode .review-date {
+  color: var(--dashboard-review-date-color);
+}
+
+body.dark-mode .review-text {
+  color: var(--dashboard-review-text-color);
+}
+
+body.dark-mode .settings-section {
+  background-color: var(--dashboard-settings-section-bg);
+  box-shadow: 0 4px 15px var(--dashboard-settings-section-shadow);
+}
+
+body.dark-mode .settings-section h3 {
+  color: var(--dashboard-settings-section-h3-color);
+}
+
+body.dark-mode .setting-item {
+  border-bottom: 1px solid var(--dashboard-setting-item-border-bottom);
+}
+
+body.dark-mode .setting-item label {
+  color: var(--dashboard-setting-item-label-color);
+}
+
+body.dark-mode .setting-item .btn-secondary {
+  background: var(--dashboard-setting-item-btn-secondary-bg) !important;
+  color: var(--dashboard-setting-item-btn-secondary-color) !important;
+}
+
+body.dark-mode .setting-item .btn-secondary:hover {
+  background: var(--dashboard-setting-item-btn-secondary-hover-bg) !important;
+}
+
+body.dark-mode .setting-item input[type="checkbox"] {
+  background-color: var(--dashboard-setting-item-checkbox-bg);
+  border-color: var(--dashboard-setting-item-checkbox-border);
+}
+
+body.dark-mode .modal-content {
+  background: var(--dashboard-modal-content-bg);
+  box-shadow: 0 10px 40px var(--dashboard-modal-content-shadow);
+}
+
+body.dark-mode .modal-header h2 {
+  color: var(--dashboard-modal-header-h2-color);
+}
+
+body.dark-mode .modal-body label {
+  color: var(--dashboard-modal-label-color);
+}
+
+body.dark-mode .modal-body input,
+body.dark-mode .modal-body select,
+body.dark-mode .modal-body textarea {
+  background-color: var(--dashboard-modal-input-bg);
+  border-color: var(--dashboard-modal-input-border);
+  color: var(--dashboard-modal-input-text);
+}
+
+body.dark-mode .modal-body input:focus,
+body.dark-mode .modal-body select:focus,
+body.dark-mode .modal-body textarea:focus {
+  border-color: var(--dashboard-modal-input-focus-border);
+}
+
+body.dark-mode .modal-body textarea {
+  background-color: var(--dashboard-modal-textarea-bg);
+  border-color: var(--dashboard-modal-textarea-border);
+  color: var(--dashboard-modal-textarea-text);
+}
+
+body.dark-mode .modal-body textarea:focus {
+  border-color: var(--dashboard-modal-textarea-focus-border);
+}
+
+body.dark-mode .modal-body .form-check-label {
+  color: var(--dashboard-modal-form-check-label-color);
+}
+
+body.dark-mode .modal-body .btn-primary {
+  background-color: var(--dashboard-modal-btn-primary-bg);
+  color: var(--dashboard-modal-btn-text);
+}
+
+body.dark-mode .modal-body .btn-primary:hover {
+  background-color: var(--dashboard-modal-btn-primary-hover-bg);
+}
+
+body.dark-mode .modal-body .btn-secondary {
+  background-color: var(--dashboard-modal-btn-secondary-bg) !important;
+  color: var(--dashboard-modal-btn-text) !important;
+}
+
+body.dark-mode .modal-body .btn-secondary:hover {
+  background-color: var(--dashboard-modal-btn-secondary-hover-bg) !important;
+}
+
+body.dark-mode .booking-details-modal-bg {
+  background-color: var(--dashboard-booking-details-modal-bg);
+}
+
+body.dark-mode .booking-details-modal-h2-color {
+  color: var(--dashboard-booking-details-modal-h2-color);
+}
+
+body.dark-mode .booking-details-modal-p-color {
+  color: var(--dashboard-booking-details-modal-p-color);
+}
+
+body.dark-mode .booking-details-modal-strong-color {
+  color: var(--dashboard-booking-details-modal-strong-color);
+}
+
+body.dark-mode .booking-details-modal-hr-border {
+  border-color: var(--dashboard-booking-details-modal-hr-border);
+}
+
+body.dark-mode .booking-details-modal-waiting-bg {
+  background-color: var(--dashboard-booking-details-modal-waiting-bg);
+}
+
+body.dark-mode .booking-details-modal-waiting-icon-color {
+  color: var(--dashboard-booking-details-modal-waiting-icon-color);
+}
+
+body.dark-mode .booking-details-modal-waiting-h6-color {
+  color: var(--dashboard-booking-details-modal-waiting-h6-color);
+}
+
+body.dark-mode .booking-details-modal-waiting-p-color {
+  color: var(--dashboard-booking-details-modal-waiting-p-color);
+}
+
+body.dark-mode .review-card-bg {
+  background-color: var(--dashboard-review-card-bg);
+}
+
+body.dark-mode .review-card-h6-color {
+  color: var(--dashboard-review-card-h6-color);
+}
+
+body.dark-mode .review-card-stars-color {
+  color: var(--dashboard-review-card-stars-color);
+}
+
+body.dark-mode .review-card-muted-color {
+  color: var(--dashboard-review-card-muted-color);
+}
+
+body.dark-mode .review-card-p-color {
+  color: var(--dashboard-review-card-p-color);
+}
+
+/* Dark mode toggle button positioning for dashboard pages */
+#dark-mode-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+}
+
+
 .tx-dark {
   color: var(--dark-color);
 }
@@ -928,7 +1586,17 @@ aside .nav-link i {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
-
+.stat-card ,
+.upcoming-bookings,
+.recent-reviews,
+.profile-header,
+.profile-section,
+.earning-card,
+.earnings-history,
+.reviews-summary,
+.settings-section  {
+  background: white;
+}
 .profile-avatar {
   width: 120px;
   height: 120px;
@@ -965,7 +1633,6 @@ aside .nav-link i {
 }
 
 .stat-item {
-  background: #f8f9fa;
   border-radius: 8px;
 }
 
@@ -993,7 +1660,6 @@ aside .nav-link i {
 
 .notification-item.unread {
   border-left-color: #667eea;
-  background: #f8f9ff;
 }
 
 .notification-icon {

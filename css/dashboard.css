@@ -1332,3 +1332,12 @@ textarea#comment {
     transform: scale(1);
   }
 }
+
+div.description p {
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+textarea#description {
+  max-height: 200px;
+}

@@ -4,7 +4,6 @@
 
 body {
   font-family: Arial, sans-serif;
-
   background: linear-gradient(to right, #667eea, #764ba2);
   display: flex;
   justify-content: center;
@@ -13,7 +12,6 @@ body {
   margin: 0;
   color: #333;
 }
-
 .auth-container {
   padding: 20px 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);

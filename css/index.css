@@ -15,6 +15,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   scroll-snap-type: none;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 :root {
@@ -33,6 +36,145 @@ body {
     --dark-gray: #4f4f4f;
     --error-color: #eb5757;
   }
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+body.dark-mode {
+  --primary-color: #6366f1; 
+  --secondary-color: #8b5cf6;
+  --accent-color: #10b981;
+  --text-color: #e5e7eb; 
+  --background-color-light: #1a1a1a; 
+  --background-color-blue: #2c2c2c; 
+  --white-color: #374151; 
+  --light-gray: #4b5563; 
+  --dark-gray: #9ca3af; 
+  --error-color: #ef4444;
+  --card-bg-light: #2c2c2c; 
+  --shadow-color-light: rgba(0, 0, 0, 0.4); 
+}
+
+body.dark-mode body {
+  background-color: var(--background-color-light);
+  color: var(--text-color);
+}
+body.dark-mode .navbar .nav-link {
+  color: var(--text-color) !important; 
+}
+body.dark-mode .navbar-brand {
+  color: var(--text-color) !important;
+}
+body.dark-mode .navbar-brand .fw-bold {
+  color: var(--text-color) !important;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--text-color);
+}
+body.dark-mode p {
+  color: var(--dark-gray);
+}
+body.dark-mode .navbar {
+  background-color: var(--white-color) !important; 
+}
+body.dark-mode .custom-select,
+body.dark-mode .input-group.location {
+  background-color: var(--white-color) !important; 
+  color: var(--text-color) !important; 
+  border-color: var(--light-gray) !important; 
+}
+body.dark-mode .input-group.location::placeholder {
+  color: var(--dark-gray) !important; 
+}
+body.dark-mode .landing .bg-white {
+  background-color: var(--white-color) !important; 
+}
+body.dark-mode .get-location-btn {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--text-color) !important;
+}
+body.dark-mode .card {
+  background-color: var(--card-bg-light) !important;
+  box-shadow: 0 0.5rem 1rem var(--shadow-color-light) !important;
+}
+body.dark-mode .services .col,
+body.dark-mode .works .col,
+body.dark-mode .reviews .card {
+  background-color: var(--card-bg-light) !important;
+  color: var(--text-color);
+}
+body.dark-mode .services .col p,
+body.dark-mode .works .col p,
+body.dark-mode .reviews .card p {
+  color: var(--dark-gray);
+}
+body.dark-mode .reviews {
+  background-color: var(--background-color-light) !important;
+}
+body.dark-mode .reviews h2,
+body.dark-mode .reviews p {
+  color: var(--text-color) !important; 
+}
+body.dark-mode .logo {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+body.dark-mode .services {
+  background-color: var(--background-color-light) !important; 
+}
+body.dark-mode .services h2,
+body.dark-mode .services p {
+  color: var(--text-color) !important; 
+}
+body.dark-mode .service-icon {
+  background-color: var(--background-color-blue);
+  color: var(--primary-color);
+}
+body.dark-mode .works .row .col .content::before {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+body.dark-mode .get-started {
+  background-color: var(--primary-color) !important;
+}
+body.dark-mode .get-started p {
+  color: var(--text-color);
+}
+body.dark-mode .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+body.dark-mode .btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+body.dark-mode .btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+body.dark-mode .border-light {
+  border-color: var(--light-gray) !important;
+}
+body.dark-mode .reviews .card small {
+  color: var(--dark-gray);
+}
+body.dark-mode .reviews .card h5 {
+  color: var(--text-color);
+}
+body.dark-mode .service-card:hover {
+  box-shadow: 0 8px 25px var(--shadow-color-light) !important;
+}
+body.dark-mode .works .row .col:hover {
+  box-shadow: var(--shadow-color-light), 2px 4px 15px var(--shadow-color-light);
+}
+body.dark-mode footer {
+  background-color: #111827 !important;
 }
 /* DARK MODE */
 body.dark-mode {
@@ -164,8 +306,24 @@ header {
   -o-border-radius: 4px;
   font-size: 1rem;
 }
-
 /* END LOGO */
+.navbar {
+  /* background-color: var(--navbar-bg-light);  */
+  transition: background-color 0.3s ease; 
+}
+.btn-primary {
+  /* background-color: var(--primary-btn-bg-light); */
+  /* border-color: var(--primary-btn-bg-light); */
+  /* color: var(--primary-btn-text-light); */
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+/* For outline primary buttons */
+.btn-outline-primary {
+  /* border-color: var(--outline-btn-border-light); */
+  /* color: var(--outline-btn-text-light); */
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
 
 /* END HEADER */
 
@@ -222,9 +380,7 @@ header {
 .works .row .col {
   counter-increment: col-num;
   --tw-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
-
   box-shadow: var(--tw-shadow);
-
   &:hover {
     box-shadow: var(--tw-shadow), 2px 4px 15px #eee;
   }
@@ -255,6 +411,11 @@ header {
   margin: 0 auto 1rem;
   width: 64px;
   height: 64px;
+}
+.card {
+  background-color: var(--card-bg-light);
+  box-shadow: 0 0.5rem 1rem var(--shadow-color-light);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .reviews .cards {
@@ -404,6 +565,7 @@ footer .social-links a {
   height: 4rem;
 }
 
+
 #servicesContainer {
   #service-intro {
     display: flex;
@@ -413,7 +575,6 @@ footer .social-links a {
     margin-bottom: 0.5rem;
   }
 }
-
 .img-booking {
   width: 275px;
   height: 155px;

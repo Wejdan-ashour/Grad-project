@@ -34,6 +34,49 @@ body {
     --error-color: #eb5757;
   }
 }
+/* DARK MODE */
+body.dark-mode {
+  /* --primary-color: #60a5fa;
+  --secondary-color: #4b5563;
+  --accent-color: #10b981;
+  --text-color: #f3f4f6;
+  --background-color-light: #1f2937;
+  --background-color-blue: #374151;
+  --white-color: #111827;
+  --light-gray: #9ca3af;
+  --dark-gray: #d1d5db;
+  --error-color: #f87171; */
+  --white-color: #fff;
+  --dark-gray: #d1d5db;
+}
+body.dark-mode ,
+body.dark-mode header nav,
+body.dark-mode .works,
+body.dark-mode .reviews{
+  background-color: rgb(31 41 55) !important;
+}
+body.dark-mode .landing,
+body.dark-mode .works {
+  background-color: hsl(216, 47%, 29%) !important;
+}
+body.dark-mode .card,
+body.dark-mode .service-filter-bar {
+  background-color: hsl(216, 46%, 37%) !important;
+
+}
+body.dark-mode header nav a ,
+body.dark-mode h1 ,
+body.dark-mode h2,
+body.dark-mode h3{
+  color: var(--white-color) !important;
+}
+body.dark-mode .works .col {
+  background-color: rgb(31 41 55) !important;
+}
+body.dark-mode p {
+  color: var(--dark-gray);
+}
+
 
 h1,
 h2,

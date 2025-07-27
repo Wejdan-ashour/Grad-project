@@ -8,7 +8,119 @@
   --icon-color: #ffd700;
   --title-size: 1.5rem;
 }
+/* Dark Mode */
+#dark-mode-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+}
+body.dark-mode {
+  --body-bg-color: #121212;
+  /* --white-color: #1e1e1e; */
+  --white-color:#f5f5f5;
+  --gray-color: #aaa;
+  /* --dark-color: #f5f5f5; */
+  --dark-color:#1e1e1e;
+}
 
+body.dark-mode {
+  background-color: var(--body-bg-color)!important;
+  color: var(--white-color)!important;
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .action-card,
+body.dark-mode .service-card,
+body.dark-mode .upcoming-bookings,
+body.dark-mode .recent-reviews,
+body.dark-mode .popular-services,
+body.dark-mode .profile-header,
+body.dark-mode .profile-section,
+body.dark-mode .faq-section,
+body.dark-mode .support-card,
+body.dark-mode .notification-item,
+body.dark-mode .modal-content,
+body.dark-mode .booking-item,
+body.dark-mode .review-item ,
+body.dark-mode .earning-card,
+body.dark-mode .earnings-history {
+  background-color: var(--dark-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05)!important;
+}
+
+body.dark-mode .top-header {
+  background-color: var(--body-bg-color) !important;
+}
+
+body.dark-mode .search-box input {
+  background-color: #1f1f1f !important;
+  border-color: #444 !important;
+}
+body.dark-mode .btn-secondary {
+  background: #2c2c2c !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark-mode header .page-title,
+body.dark-mode .quick-actions h2,
+body.dark-mode .support-header h2,
+body.dark-mode .list-group-item,
+body.dark-mode .faq-question h4,
+body.dark-mode .upcoming-bookings h2,
+body.dark-mode .upcoming-bookings h4,
+body.dark-mode .recent-reviews h2 ,
+body.dark-mode .recent-reviews span,
+body.dark-mode .service-card h3,
+body.dark-mode .overall-rating h3{
+  color: var(--white-color) !important; 
+}
+body.dark-mode .faq-question,
+body.dark-mode .booking-row.header,
+body.dark-mode .earning-row.header,
+body.dark-mode .booking-row,
+body.dark-mode .list-group-item,
+body.dark-mode .favorite-provider,
+body.dark-mode .booking-form textarea ,
+body.dark-mode .modal-body .form-select,
+body.dark-mode .modal-body textarea ,
+body.dark-mode .modal-body .bg-light , 
+body.dark-mode .earning-row,
+body.dark-mode .reviews-summary,
+body.dark-mode button.nav-link{
+  background-color: #1c1c1c !important;
+}
+body.dark-mode .modal-content input,
+body.dark-mode .btn-secondary,
+body.dark-mode .nav-link,
+body.dark-mode .user-name,
+body.dark-mode .search-box input,
+body.dark-mode .notification-btn,
+body.dark-mode .review-text,
+body.dark-mode .booking-info p,
+body.dark-mode .service-card p,
+body.dark-mode .booking-row ,
+body.dark-mode .booking-form input::placeholder,
+body.dark-mode .booking-form textarea::placeholder,
+body.dark-mode .booking-form input ,
+body.dark-mode .modal-body .form-select option , 
+body.dark-mode .modal-body .bg-light p ,
+body.dark-mode .modal-body textarea::placeholder,
+body.dark-mode .reviewer-info span , 
+body.dark-mode .text-warning span {
+  color: var(--gray-color) !important;
+}
+body.dark-mode .profile-section .stat-item ,
+body.dark-mode .input-group input ,
+body.dark-mode .settings-section ,
+body.dark-mode  input.form-control {
+  background-color: var(--dark-color) !important;
+}
 .tx-dark {
   color: var(--dark-color);
 }
@@ -1341,3 +1453,5 @@ div.description p {
 textarea#description {
   max-height: 200px;
 }
+
+/* Responsive */

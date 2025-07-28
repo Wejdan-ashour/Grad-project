@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  document
-    .getElementById("testimoialsBtn")
-    .addEventListener("click", function () {
+  const testimoialsBtn = document.getElementById("testimoialsBtn");
+  if (testimoialsBtn) { 
+    testimoialsBtn.addEventListener("click", function () {
       const testimoialsNavLink = document.querySelector(
         ".nav-link[href=\'#testimonials\']"
       );
@@ -224,10 +224,9 @@ export function getLocation() {
         console.error(err);
       }
 
-    locationInput.disabled = false;
-    locationBtn.disabled = false;
-    locationBtn.textContent = "Get Address";
-  });
+      locationInput.disabled = false;
+      locationBtn.disabled = false;
+      locationBtn.textContent = "Get Address";
+    });
+  }
 }
-
-getLocation();
